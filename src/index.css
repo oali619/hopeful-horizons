@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 210 100% 99%;  /* Snow Drift */
-    --foreground: 206 24% 34%;   /* Slate Fjord */
+    --background: 0 0% 100%;     /* White */
+    --foreground: 210 19% 23%;   /* Slate Gray */
 
-    --card: 204 39% 95%;         /* Glacier Mist */
-    --card-foreground: 206 24% 34%;  /* Slate Fjord */
+    --card: 0 0% 100%;           /* White */
+    --card-foreground: 210 19% 23%;  /* Slate Gray */
 
-    --popover: 210 100% 99%;     /* Snow Drift */
-    --popover-foreground: 206 24% 34%;  /* Slate Fjord */
+    --popover: 0 0% 100%;        /* White */
+    --popover-foreground: 210 19% 23%;  /* Slate Gray */
 
-    --primary: 200 71% 88%;      /* Powder-Blue Breeze */
-    --primary-foreground: 206 24% 34%;  /* Slate Fjord */
+    --primary: 204 100% 39%;     /* Bright Blue */
+    --primary-foreground: 0 0% 100%;    /* White */
 
-    --secondary: 200 73% 80%;    /* Frosted Sky */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 41 100% 53%;    /* Sun Yellow */
+    --secondary-foreground: 210 19% 23%;  /* Slate Gray */
 
-    --muted: 204 39% 95%;        /* Glacier Mist */
-    --muted-foreground: 206 19% 58%;  /* Cool Granite */
+    --muted: 210 33% 96%;        /* Cool Gray */
+    --muted-foreground: 210 19% 45%;  /* Softer Slate Gray */
 
-    --accent: 228 79% 92%;       /* Icy Lilac */
-    --accent-foreground: 206 24% 34%;  /* Slate Fjord */
+    --accent: 204 57% 64%;       /* Soft Blue */
+    --accent-foreground: 210 19% 23%;  /* Slate Gray */
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 206 19% 58%;       /* Cool Granite */
-    --input: 206 19% 58%;        /* Cool Granite */
-    --ring: 200 71% 88%;         /* Powder-Blue Breeze */
+    --border: 204 65% 88%;       /* Light Blue */
+    --input: 204 65% 88%;        /* Light Blue */
+    --ring: 204 100% 39%;        /* Bright Blue */
 
     --radius: 0.5rem;
   }
@@ -45,7 +45,7 @@
   }
 
   body {
-    @apply bg-hopeful-snow-drift text-hopeful-slate-fjord;
+    @apply bg-hopeful-white text-hopeful-slate-gray;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -56,26 +56,26 @@
   }
   
   .hopeful-heading {
-    @apply text-hopeful-slate-fjord font-semibold;
+    @apply text-hopeful-slate-gray font-semibold;
   }
   
   .hopeful-btn-primary {
-    @apply bg-hopeful-blue-breeze hover:bg-hopeful-frosted-sky text-hopeful-slate-fjord font-medium px-5 py-2.5 rounded-md transition-colors;
+    @apply bg-hopeful-sun-yellow hover:bg-[#FFCF3E] text-hopeful-slate-gray font-medium px-5 py-2.5 rounded-md transition-colors;
   }
   
   .hopeful-btn-secondary {
-    @apply bg-hopeful-glacier-mist hover:bg-hopeful-blue-breeze text-hopeful-slate-fjord font-medium px-5 py-2.5 rounded-md transition-colors;
+    @apply bg-hopeful-bright-blue hover:bg-hopeful-soft-blue text-white font-medium px-5 py-2.5 rounded-md transition-colors;
   }
   
   .hopeful-card {
-    @apply bg-white rounded-lg border border-hopeful-glacier-mist shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-white rounded-lg border border-hopeful-light-blue shadow-sm hover:shadow-md transition-shadow;
   }
   
   .hopeful-highlight {
-    @apply bg-hopeful-icy-lilac rounded-md p-4;
+    @apply bg-hopeful-cool-gray rounded-md p-4;
   }
   
   .hopeful-link {
-    @apply text-hopeful-frosted-sky hover:text-hopeful-blue-breeze underline transition-colors font-medium;
+    @apply text-hopeful-bright-blue hover:text-hopeful-soft-blue underline transition-colors font-medium;
   }
 }

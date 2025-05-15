@@ -18,14 +18,14 @@ const Hero: React.FC<HeroProps> = ({
   image,
 }) => {
   return (
-    <div className="relative bg-hopeful-glacier-mist/50 overflow-hidden">
+    <div className="relative bg-hopeful-cool-gray overflow-hidden">
       <div className="hopeful-container py-12 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold text-hopeful-slate-fjord leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-hopeful-bright-blue leading-tight">
               {title}
             </h1>
-            <p className="text-xl md:text-2xl text-hopeful-cool-granite">
+            <p className="text-xl md:text-2xl text-hopeful-slate-gray">
               {subtitle}
             </p>
             {ctaText && (
@@ -45,7 +45,7 @@ const Hero: React.FC<HeroProps> = ({
                 className="rounded-lg max-h-[400px] w-auto object-cover shadow-lg border-4 border-white"
               />
             ) : (
-              <div className="aspect-video w-full max-w-lg bg-hopeful-blue-breeze rounded-lg flex items-center justify-center text-hopeful-slate-fjord">
+              <div className="aspect-video w-full max-w-lg bg-hopeful-bright-blue rounded-lg flex items-center justify-center text-white">
                 <span className="text-xl font-semibold">Hopeful Horizons</span>
               </div>
             )}

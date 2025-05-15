@@ -63,15 +63,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// New cool-toned color scheme
+				// New bright blue and yellow color scheme
 				hopeful: {
-					'blue-breeze': '#CFE8F6',  // Primary brand color
-					'frosted-sky': '#A6D9F4',  // Secondary accent
-					'icy-lilac': '#D9E3FD',    // Highlight/CTA
-					'snow-drift': '#FBFDFF',   // Background light
-					'glacier-mist': '#E7EFF4', // Supporting neutral
-					'slate-fjord': '#415A6B',  // Accessible text
-					'cool-granite': '#7A96A9', // Gentle contrast
+					'bright-blue': '#0080C6',  // Primary brand color
+					'sun-yellow': '#FFC20E',   // Secondary accent / CTA
+					'white': '#FFFFFF',        // Background light
+					'cool-gray': '#F4F6F8',    // Neutral light
+					'slate-gray': '#2E3A46',   // Neutral dark
+					'soft-blue': '#66AEDD',    // Interactive hover
+					'light-blue': '#D0E6F2',   // Border & divider
 				}
 			},
 			borderRadius: {

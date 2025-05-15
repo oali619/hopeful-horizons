@@ -18,7 +18,7 @@ const Section: React.FC<SectionProps> = ({
   color = 'default',
   id,
 }) => {
-  const bgColor = color === 'alternate' ? 'bg-hopeful-glacier-mist/20' : 'bg-white';
+  const bgColor = color === 'alternate' ? 'bg-hopeful-cool-gray' : 'bg-hopeful-white';
 
   return (
     <section id={id} className={`py-12 md:py-16 ${bgColor} ${className}`}>
@@ -26,12 +26,12 @@ const Section: React.FC<SectionProps> = ({
         {(title || subtitle) && (
           <div className="mb-10 text-center max-w-3xl mx-auto">
             {title && (
-              <h2 className="text-3xl md:text-4xl font-bold text-hopeful-slate-fjord mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-hopeful-bright-blue mb-4">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-lg text-hopeful-cool-granite">
+              <p className="text-lg text-hopeful-slate-gray">
                 {subtitle}
               </p>
             )}
