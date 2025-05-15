@@ -63,15 +63,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom color scheme - Updated for Hopeful Horizons
-				hopeful: {
-					'seafoam-mist': '#AEE8DC',     // Primary brand color
-					'soft-coral': '#F6B8A9',       // Secondary accent
-					'sunlit-sand': '#FFE9C3',      // Highlight/CTA
-					'whisper-white': '#FDFBF9',    // Background light
-					'driftwood-gray': '#8F8578',   // Supporting neutral
-					'charcoal-brown': '#594A42',   // Accessible text/outlines
-					'slate-sage': '#5C8477',       // Gentle contrast option
+				// Custom color scheme
+				autism: {
+					'peach-cream': '#F6BFA6', // Primary brand color
+					'soft-coral': '#F48C7F',  // Secondary accent
+					'warm-mist': '#FFF4EE',   // Calming balance/background
+					'honey-blush': '#FFDFAF', // Highlight/call-out
+					'powder-apricot': '#FAD6C4', // Support accent
+					'clay-taupe': '#7A5B4C',  // Accessible text/borders
+					'sienna-gray': '#A88C80', // Gentle contrast
 				}
 			},
 			borderRadius: {

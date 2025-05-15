@@ -20,11 +20,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-b border-hopeful-driftwood-gray/20 sticky top-0 z-50 shadow-sm">
-      <div className="hopeful-container flex justify-between items-center py-4">
+    <nav className="bg-white border-b border-autism-powder-apricot sticky top-0 z-50 shadow-sm">
+      <div className="autism-container flex justify-between items-center py-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="h-10 w-10 rounded-full bg-hopeful-seafoam-mist flex items-center justify-center text-hopeful-charcoal-brown font-bold">HH</div>
-          <span className="text-xl font-bold text-hopeful-charcoal-brown">Hopeful Horizons</span>
+          <div className="h-10 w-10 rounded-full bg-autism-peach-cream flex items-center justify-center text-autism-clay-taupe font-bold">AC</div>
+          <span className="text-xl font-bold text-autism-clay-taupe">Autism Center MN</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -33,8 +33,8 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`text-hopeful-charcoal-brown hover:text-hopeful-soft-coral transition-colors ${
-                isActive(link.path) ? "font-semibold border-b-2 border-hopeful-seafoam-mist" : ""
+              className={`text-autism-clay-taupe hover:text-autism-soft-coral transition-colors ${
+                isActive(link.path) ? "font-semibold border-b-2 border-autism-peach-cream" : ""
               }`}
             >
               {link.title}
@@ -46,7 +46,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-hopeful-charcoal-brown p-2"
+            className="text-autism-clay-taupe p-2"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -55,15 +55,15 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-hopeful-driftwood-gray/20">
-          <div className="hopeful-container py-4 flex flex-col space-y-4">
+        <div className="md:hidden bg-white border-t border-autism-powder-apricot">
+          <div className="autism-container py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsMenuOpen(false)}
-                className={`text-hopeful-charcoal-brown hover:text-hopeful-soft-coral transition-colors py-2 ${
-                  isActive(link.path) ? "font-semibold border-l-4 pl-2 border-hopeful-seafoam-mist" : ""
+                className={`text-autism-clay-taupe hover:text-autism-soft-coral transition-colors py-2 ${
+                  isActive(link.path) ? "font-semibold border-l-4 pl-2 border-autism-peach-cream" : ""
                 }`}
               >
                 {link.title}
