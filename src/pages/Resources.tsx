@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
@@ -12,28 +11,28 @@ const Resources = () => {
       title: "Understanding IEPs",
       date: "June 15, 2025",
       time: "6:30-8:00pm",
-      location: "Autism Center MN - Conference Room",
+      location: "Hopeful Horizons - Conference Room",
       description: "Learn about Individualized Education Programs and how to advocate for your child in school settings."
     },
     {
       title: "Sensory Strategies at Home",
       date: "June 22, 2025",
       time: "10:00-11:30am",
-      location: "Autism Center MN - Activity Room",
+      location: "Hopeful Horizons - Activity Room",
       description: "Practical strategies for creating sensory-friendly environments and activities at home."
     },
     {
       title: "Transition Planning Workshop",
       date: "July 8, 2025",
       time: "6:00-7:30pm",
-      location: "Autism Center MN - Conference Room",
+      location: "Hopeful Horizons - Conference Room",
       description: "Planning for transitions across the lifespan, from early childhood to adulthood."
     },
     {
       title: "Parent Support Group",
       date: "July 15, 2025",
       time: "7:00-8:30pm",
-      location: "Autism Center MN - Community Room",
+      location: "Hopeful Horizons - Community Room",
       description: "Monthly gathering for parents to share experiences and support one another."
     },
   ];

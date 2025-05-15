@@ -23,8 +23,8 @@ const Navbar = () => {
     <nav className="bg-white border-b border-autism-powder-apricot sticky top-0 z-50 shadow-sm">
       <div className="autism-container flex justify-between items-center py-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="h-10 w-10 rounded-full bg-autism-peach-cream flex items-center justify-center text-autism-clay-taupe font-bold">AC</div>
-          <span className="text-xl font-bold text-autism-clay-taupe">Autism Center MN</span>
+          <div className="h-10 w-10 rounded-full bg-autism-peach-cream flex items-center justify-center text-autism-clay-taupe font-bold">HH</div>
+          <span className="text-xl font-bold text-autism-clay-taupe">Hopeful Horizons</span>
         </Link>
 
         {/* Desktop Navigation */}

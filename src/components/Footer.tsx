@@ -12,8 +12,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <div className="h-10 w-10 rounded-full bg-autism-peach-cream flex items-center justify-center text-autism-clay-taupe font-bold">AC</div>
-              <span className="text-xl font-bold">Autism Center MN</span>
+              <div className="h-10 w-10 rounded-full bg-autism-peach-cream flex items-center justify-center text-autism-clay-taupe font-bold">HH</div>
+              <span className="text-xl font-bold">Hopeful Horizons</span>
             </div>
             <p className="max-w-xs">
               Supporting individuals and families affected by autism with compassion, understanding, and expertise.
@@ -46,8 +46,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} className="text-autism-soft-coral" />
-                <a href="mailto:info@autismcentermn.org" className="hover:text-autism-soft-coral transition-colors">
-                  info@autismcentermn.org
+                <a href="mailto:info@hopefulhorizons.org" className="hover:text-autism-soft-coral transition-colors">
+                  info@hopefulhorizons.org
                 </a>
               </div>
             </address>
@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-autism-sienna-gray mt-8 pt-8 text-center">
-          <p>&copy; {currentYear} Autism Center MN. All rights reserved.</p>
+          <p>&copy; {currentYear} Hopeful Horizons. All rights reserved.</p>
         </div>
       </div>
     </footer>

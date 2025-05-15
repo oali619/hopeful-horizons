@@ -19,7 +19,7 @@ const Index = () => {
       />
       
       <Section
-        title="Welcome to Autism Center MN"
+        title="Welcome to Hopeful Horizons"
         subtitle="We're dedicated to providing comprehensive support, resources, and services for individuals with autism and their families across Minnesota."
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -93,7 +93,7 @@ const Index = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <TestimonialCard
-            quote="The team at Autism Center MN gave our son the tools he needed to thrive. Their personalized approach made all the difference in his development."
+            quote="The team at Hopeful Horizons gave our son the tools he needed to thrive. Their personalized approach made all the difference in his development."
             author="Sarah Johnson"
             role="Parent"
           />

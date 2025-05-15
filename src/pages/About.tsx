@@ -8,7 +8,7 @@ const About = () => {
   return (
     <Layout>
       <Hero
-        title="About Autism Center MN"
+        title="About Hopeful Horizons"
         subtitle="Our mission, team, and commitment to the autism community in Minnesota"
       />
       
@@ -17,7 +17,7 @@ const About = () => {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-autism-clay-taupe">Our Story</h2>
             <p className="mb-4">
-              Autism Center MN was founded in 2010 by a group of parents, educators, and healthcare professionals who recognized the need for comprehensive autism services in Minnesota. What began as a small support group has grown into a full-service center offering diagnostic, therapeutic, and educational resources for individuals on the autism spectrum.
+              Hopeful Horizons was founded in 2010 by a group of parents, educators, and healthcare professionals who recognized the need for comprehensive autism services in Minnesota. What began as a small support group has grown into a full-service center offering diagnostic, therapeutic, and educational resources for individuals on the autism spectrum.
             </p>
             <p>
               Our center was built on the belief that every individual with autism deserves access to personalized, evidence-based support that recognizes their unique strengths and challenges. Today, we continue to expand our services while maintaining our commitment to excellence, compassion, and community.
@@ -117,7 +117,7 @@ const About = () => {
             Join Our Community
           </h2>
           <p className="text-lg mb-8 text-autism-sienna-gray">
-            Whether you're seeking services, looking to volunteer, or interested in employment opportunities, we invite you to become part of the Autism Center MN family.
+            Whether you're seeking services, looking to volunteer, or interested in employment opportunities, we invite you to become part of the Hopeful Horizons family.
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-4">
             <a href="/contact" className="autism-btn-primary text-center">

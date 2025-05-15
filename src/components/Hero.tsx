@@ -41,12 +41,12 @@ const Hero: React.FC<HeroProps> = ({
             {image ? (
               <img 
                 src={image} 
-                alt="Autism Center MN" 
+                alt="Hopeful Horizons" 
                 className="rounded-lg max-h-[400px] w-auto object-cover shadow-lg border-4 border-white"
               />
             ) : (
               <div className="aspect-video w-full max-w-lg bg-autism-peach-cream rounded-lg flex items-center justify-center text-autism-clay-taupe">
-                <span className="text-xl font-semibold">Autism Center MN</span>
+                <span className="text-xl font-semibold">Hopeful Horizons</span>
               </div>
             )}
           </div>

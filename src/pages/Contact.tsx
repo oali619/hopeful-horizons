@@ -62,7 +62,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
                   <p className="text-autism-sienna-gray">
-                    <a href="mailto:info@autismcentermn.org" className="hover:text-autism-soft-coral">info@autismcentermn.org</a>
+                    <a href="mailto:info@hopefulhorizons.org" className="hover:text-autism-soft-coral">info@hopefulhorizons.org</a>
                   </p>
                 </div>
               </div>
