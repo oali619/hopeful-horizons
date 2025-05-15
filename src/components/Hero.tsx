@@ -18,19 +18,19 @@ const Hero: React.FC<HeroProps> = ({
   image,
 }) => {
   return (
-    <div className="relative bg-autism-warm-mist overflow-hidden">
-      <div className="autism-container py-12 md:py-20">
+    <div className="relative bg-hopeful-glacier-mist/50 overflow-hidden">
+      <div className="hopeful-container py-12 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold text-autism-clay-taupe leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-hopeful-slate-fjord leading-tight">
               {title}
             </h1>
-            <p className="text-xl md:text-2xl text-autism-sienna-gray">
+            <p className="text-xl md:text-2xl text-hopeful-cool-granite">
               {subtitle}
             </p>
             {ctaText && (
               <div className="pt-4">
-                <Link to={ctaLink} className="autism-btn-primary inline-block">
+                <Link to={ctaLink} className="hopeful-btn-primary inline-block">
                   {ctaText}
                 </Link>
               </div>
@@ -45,7 +45,7 @@ const Hero: React.FC<HeroProps> = ({
                 className="rounded-lg max-h-[400px] w-auto object-cover shadow-lg border-4 border-white"
               />
             ) : (
-              <div className="aspect-video w-full max-w-lg bg-autism-peach-cream rounded-lg flex items-center justify-center text-autism-clay-taupe">
+              <div className="aspect-video w-full max-w-lg bg-hopeful-blue-breeze rounded-lg flex items-center justify-center text-hopeful-slate-fjord">
                 <span className="text-xl font-semibold">Hopeful Horizons</span>
               </div>
             )}

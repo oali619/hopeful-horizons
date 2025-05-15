@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 23 86% 97%;  /* Warm Mist */
-    --foreground: 20 22% 39%;  /* Clay Taupe */
+    --background: 210 100% 99%;  /* Snow Drift */
+    --foreground: 206 24% 34%;   /* Slate Fjord */
 
-    --card: 23 77% 89%;        /* Powder Apricot */
-    --card-foreground: 20 22% 39%;  /* Clay Taupe */
+    --card: 204 39% 95%;         /* Glacier Mist */
+    --card-foreground: 206 24% 34%;  /* Slate Fjord */
 
-    --popover: 23 86% 97%;     /* Warm Mist */
-    --popover-foreground: 20 22% 39%;  /* Clay Taupe */
+    --popover: 210 100% 99%;     /* Snow Drift */
+    --popover-foreground: 206 24% 34%;  /* Slate Fjord */
 
-    --primary: 19 77% 83%;     /* Peach Cream */
-    --primary-foreground: 20 22% 39%;  /* Clay Taupe */
+    --primary: 200 71% 88%;      /* Powder-Blue Breeze */
+    --primary-foreground: 206 24% 34%;  /* Slate Fjord */
 
-    --secondary: 8 79% 72%;    /* Soft Coral */
+    --secondary: 200 73% 80%;    /* Frosted Sky */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 23 77% 89%;       /* Powder Apricot */
-    --muted-foreground: 23 17% 59%;  /* Sienna Gray */
+    --muted: 204 39% 95%;        /* Glacier Mist */
+    --muted-foreground: 206 19% 58%;  /* Cool Granite */
 
-    --accent: 37 100% 84%;     /* Honey Blush */
-    --accent-foreground: 20 22% 39%;  /* Clay Taupe */
+    --accent: 228 79% 92%;       /* Icy Lilac */
+    --accent-foreground: 206 24% 34%;  /* Slate Fjord */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 23 17% 59%;      /* Sienna Gray */
-    --input: 23 17% 59%;       /* Sienna Gray */
-    --ring: 19 77% 83%;        /* Peach Cream */
+    --border: 206 19% 58%;       /* Cool Granite */
+    --input: 206 19% 58%;        /* Cool Granite */
+    --ring: 200 71% 88%;         /* Powder-Blue Breeze */
 
     --radius: 0.5rem;
   }
@@ -45,37 +45,37 @@
   }
 
   body {
-    @apply bg-autism-warm-mist text-autism-clay-taupe;
+    @apply bg-hopeful-snow-drift text-hopeful-slate-fjord;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 @layer components {
-  .autism-container {
+  .hopeful-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
-  .autism-heading {
-    @apply text-autism-clay-taupe font-semibold;
+  .hopeful-heading {
+    @apply text-hopeful-slate-fjord font-semibold;
   }
   
-  .autism-btn-primary {
-    @apply bg-autism-peach-cream hover:bg-autism-soft-coral text-autism-clay-taupe font-medium px-5 py-2.5 rounded-md transition-colors;
+  .hopeful-btn-primary {
+    @apply bg-hopeful-blue-breeze hover:bg-hopeful-frosted-sky text-hopeful-slate-fjord font-medium px-5 py-2.5 rounded-md transition-colors;
   }
   
-  .autism-btn-secondary {
-    @apply bg-autism-powder-apricot hover:bg-autism-peach-cream text-autism-clay-taupe font-medium px-5 py-2.5 rounded-md transition-colors;
+  .hopeful-btn-secondary {
+    @apply bg-hopeful-glacier-mist hover:bg-hopeful-blue-breeze text-hopeful-slate-fjord font-medium px-5 py-2.5 rounded-md transition-colors;
   }
   
-  .autism-card {
-    @apply bg-white rounded-lg border border-autism-powder-apricot shadow-sm hover:shadow-md transition-shadow;
+  .hopeful-card {
+    @apply bg-white rounded-lg border border-hopeful-glacier-mist shadow-sm hover:shadow-md transition-shadow;
   }
   
-  .autism-highlight {
-    @apply bg-autism-honey-blush rounded-md p-4;
+  .hopeful-highlight {
+    @apply bg-hopeful-icy-lilac rounded-md p-4;
   }
   
-  .autism-link {
-    @apply text-autism-soft-coral hover:text-autism-peach-cream underline transition-colors font-medium;
+  .hopeful-link {
+    @apply text-hopeful-frosted-sky hover:text-hopeful-blue-breeze underline transition-colors font-medium;
   }
 }
