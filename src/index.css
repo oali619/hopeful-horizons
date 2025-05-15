@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;     /* White */
-    --foreground: 210 19% 23%;   /* Slate Gray */
+    --background: 23 86% 97%;  /* Warm Mist */
+    --foreground: 20 22% 39%;  /* Clay Taupe */
 
-    --card: 0 0% 100%;           /* White */
-    --card-foreground: 210 19% 23%;  /* Slate Gray */
+    --card: 23 77% 89%;        /* Powder Apricot */
+    --card-foreground: 20 22% 39%;  /* Clay Taupe */
 
-    --popover: 0 0% 100%;        /* White */
-    --popover-foreground: 210 19% 23%;  /* Slate Gray */
+    --popover: 23 86% 97%;     /* Warm Mist */
+    --popover-foreground: 20 22% 39%;  /* Clay Taupe */
 
-    --primary: 204 100% 39%;     /* Bright Blue */
-    --primary-foreground: 0 0% 100%;    /* White */
+    --primary: 19 77% 83%;     /* Peach Cream */
+    --primary-foreground: 20 22% 39%;  /* Clay Taupe */
 
-    --secondary: 41 100% 53%;    /* Sun Yellow */
-    --secondary-foreground: 210 19% 23%;  /* Slate Gray */
+    --secondary: 8 79% 72%;    /* Soft Coral */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 33% 96%;        /* Cool Gray */
-    --muted-foreground: 210 19% 45%;  /* Softer Slate Gray */
+    --muted: 23 77% 89%;       /* Powder Apricot */
+    --muted-foreground: 23 17% 59%;  /* Sienna Gray */
 
-    --accent: 204 57% 64%;       /* Soft Blue */
-    --accent-foreground: 210 19% 23%;  /* Slate Gray */
+    --accent: 37 100% 84%;     /* Honey Blush */
+    --accent-foreground: 20 22% 39%;  /* Clay Taupe */
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 204 65% 88%;       /* Light Blue */
-    --input: 204 65% 88%;        /* Light Blue */
-    --ring: 204 100% 39%;        /* Bright Blue */
+    --border: 23 17% 59%;      /* Sienna Gray */
+    --input: 23 17% 59%;       /* Sienna Gray */
+    --ring: 19 77% 83%;        /* Peach Cream */
 
     --radius: 0.5rem;
   }
@@ -45,37 +45,37 @@
   }
 
   body {
-    @apply bg-hopeful-white text-hopeful-slate-gray;
+    @apply bg-autism-warm-mist text-autism-clay-taupe;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 @layer components {
-  .hopeful-container {
+  .autism-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
-  .hopeful-heading {
-    @apply text-hopeful-slate-gray font-semibold;
+  .autism-heading {
+    @apply text-autism-clay-taupe font-semibold;
   }
   
-  .hopeful-btn-primary {
-    @apply bg-hopeful-sun-yellow hover:bg-[#FFCF3E] text-hopeful-slate-gray font-medium px-5 py-2.5 rounded-md transition-colors;
+  .autism-btn-primary {
+    @apply bg-autism-peach-cream hover:bg-autism-soft-coral text-autism-clay-taupe font-medium px-5 py-2.5 rounded-md transition-colors;
   }
   
-  .hopeful-btn-secondary {
-    @apply bg-hopeful-bright-blue hover:bg-hopeful-soft-blue text-white font-medium px-5 py-2.5 rounded-md transition-colors;
+  .autism-btn-secondary {
+    @apply bg-autism-powder-apricot hover:bg-autism-peach-cream text-autism-clay-taupe font-medium px-5 py-2.5 rounded-md transition-colors;
   }
   
-  .hopeful-card {
-    @apply bg-white rounded-lg border border-hopeful-light-blue shadow-sm hover:shadow-md transition-shadow;
+  .autism-card {
+    @apply bg-white rounded-lg border border-autism-powder-apricot shadow-sm hover:shadow-md transition-shadow;
   }
   
-  .hopeful-highlight {
-    @apply bg-hopeful-cool-gray rounded-md p-4;
+  .autism-highlight {
+    @apply bg-autism-honey-blush rounded-md p-4;
   }
   
-  .hopeful-link {
-    @apply text-hopeful-bright-blue hover:text-hopeful-soft-blue underline transition-colors font-medium;
+  .autism-link {
+    @apply text-autism-soft-coral hover:text-autism-peach-cream underline transition-colors font-medium;
   }
 }

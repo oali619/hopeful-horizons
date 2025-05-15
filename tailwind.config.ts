@@ -63,15 +63,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// New bright blue and yellow color scheme
-				hopeful: {
-					'bright-blue': '#0080C6',  // Primary brand color
-					'sun-yellow': '#FFC20E',   // Secondary accent / CTA
-					'white': '#FFFFFF',        // Background light
-					'cool-gray': '#F4F6F8',    // Neutral light
-					'slate-gray': '#2E3A46',   // Neutral dark
-					'soft-blue': '#66AEDD',    // Interactive hover
-					'light-blue': '#D0E6F2',   // Border & divider
+				// Custom color scheme
+				autism: {
+					'peach-cream': '#F6BFA6', // Primary brand color
+					'soft-coral': '#F48C7F',  // Secondary accent
+					'warm-mist': '#FFF4EE',   // Calming balance/background
+					'honey-blush': '#FFDFAF', // Highlight/call-out
+					'powder-apricot': '#FAD6C4', // Support accent
+					'clay-taupe': '#7A5B4C',  // Accessible text/borders
+					'sienna-gray': '#A88C80', // Gentle contrast
 				}
 			},
 			borderRadius: {
