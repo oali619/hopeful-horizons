@@ -1,5 +1,5 @@
-
 import React from "react";
+import { Resend } from "resend";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
@@ -11,12 +11,24 @@ import { Textarea } from "../components/ui/textarea";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "../components/ui/sonner";
+import EmailTemplate from "../components/EmailTemplate";
 
 const Referral = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const onSubmit = (data: any) => {
     console.log(data);
+    const resend = new Resend(import.meta.env.VITE_RESEND_API_KEY);
+
+    resend.emails.send({
+      from: 'admin@hopefulhorizonsmn.com',
+      to: 'admin@hopefulhorizonsmn.com',
+      subject: "New Referral Submission",
+      react: <EmailTemplate data={data} />,
+    }).catch((err: any) => {
+      toast.error("There was an error sending your referral. Please try again later.");
+      console.error(err);
+    });
     toast.success("Thank you for your referral. We'll be in touch soon.");
     reset();
   };
@@ -30,8 +42,8 @@ const Referral = () => {
         ctaLink=""
       />
 
-      <Section 
-        title="Referral Process" 
+      <Section
+        title="Referral Process"
         subtitle="We welcome referrals from healthcare providers, educators, and families."
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -45,7 +57,7 @@ const Referral = () => {
                   <p className="text-neutral-dark mt-1">Complete the referral form on this page with as much detail as possible.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">2</div>
                 <div>
@@ -53,7 +65,7 @@ const Referral = () => {
                   <p className="text-neutral-dark mt-1">Our intake coordinator will contact the family within 2 business days of receiving the referral.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">3</div>
                 <div>
@@ -61,7 +73,7 @@ const Referral = () => {
                   <p className="text-neutral-dark mt-1">We'll schedule an initial assessment to determine the appropriate services.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">4</div>
                 <div>
@@ -145,11 +157,11 @@ const Referral = () => {
                     {errors.clientAge && <p className="text-red-500 text-xs mt-1">This field is required</p>}
                   </div>
                 </div>
-                
+
                 <div className="space-y-1.5 mt-4">
                   <Label htmlFor="reasonForReferral">Reason for Referral*</Label>
-                  <Textarea 
-                    id="reasonForReferral" 
+                  <Textarea
+                    id="reasonForReferral"
                     {...register("reasonForReferral", { required: true })}
                     placeholder="Please describe the primary concerns and reasons for seeking services"
                     className={errors.reasonForReferral ? "border-red-500" : ""}
