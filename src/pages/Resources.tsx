@@ -68,25 +68,25 @@ const Resources = () => {
     {
       title: "Minnesota Department of Human Services",
       description: "Information on state programs and services for individuals with disabilities.",
-      link: "#",
+      link: "https://mn.gov/dhs/",
       icon: <ExternalLink size={20} />
     },
     {
       title: "Autism Society of Minnesota",
       description: "Advocacy, education, and community connections for individuals affected by autism.",
-      link: "#",
+      link: "https://ausm.org/",
       icon: <ExternalLink size={20} />
     },
     {
       title: "PACER Center",
       description: "Parent training and information center for families of children with disabilities.",
-      link: "#",
+      link: "https://www.pacer.org/",
       icon: <ExternalLink size={20} />
     },
     {
       title: "Minnesota Autism Resource Portal",
       description: "Centralized resource for autism services and supports across Minnesota.",
-      link: "#",
+      link: "https://mn.gov/autism/",
       icon: <ExternalLink size={20} />
     },
   ];

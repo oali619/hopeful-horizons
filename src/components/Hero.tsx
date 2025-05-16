@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import hopefulHorizonsLogo from '../images/hopeful-horizons-logo.png';
 
 interface HeroProps {
   title: string;
@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = ({
   subtitle,
   ctaText = "Learn More",
   ctaLink = "/about",
-  image,
+  image = hopefulHorizonsLogo,
 }) => {
   return (
     <div className="relative bg-autism-warm-mist overflow-hidden">

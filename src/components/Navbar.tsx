@@ -1,7 +1,7 @@
-
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import hopefulHorizonsLogo from '../images/hopeful-horizons2.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

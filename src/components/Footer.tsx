@@ -36,18 +36,18 @@ const Footer = () => {
             <address className="not-italic space-y-2">
               <div className="flex items-center gap-2">
                 <MapPin size={16} className="text-autism-soft-coral" />
-                <span>123 Autism Ave, Minneapolis, MN 55401</span>
+                <span>1710 Douglas Dr. Ste 225E Golden Valley, MN 55422</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} className="text-autism-soft-coral" />
                 <a href="tel:+16125551234" className="hover:text-autism-soft-coral transition-colors">
-                  (612) 555-1234
+                  (612) 222-2817
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} className="text-autism-soft-coral" />
-                <a href="mailto:info@hopefulhorizons.org" className="hover:text-autism-soft-coral transition-colors">
-                  info@hopefulhorizons.org
+                <a href="mailto:admin@hopefulhorizonsmn.com" className="hover:text-autism-soft-coral transition-colors">
+                  admin@hopefulhorizonsmn.com
                 </a>
               </div>
             </address>
@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-autism-sienna-gray mt-8 pt-8 text-center">
-          <p>&copy; {currentYear} Hopeful Horizons. All rights reserved.</p>
+          <p>&copy; {currentYear} Hopeful Horizons LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -36,8 +36,8 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold mb-1">Address</h4>
                   <address className="not-italic text-autism-sienna-gray">
-                    123 Autism Ave<br />
-                    Minneapolis, MN 55401<br />
+                    1710 Douglas Dr Ste #225E<br />
+                    Golden Valley, MN 55422<br />
                     United States
                   </address>
                 </div>
@@ -50,7 +50,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
                   <p className="text-autism-sienna-gray">
-                    <a href="tel:+16125551234" className="hover:text-autism-soft-coral">(612) 555-1234</a>
+                    <a href="tel:+16122222817" className="hover:text-autism-soft-coral">(612) 222-2817</a>
                   </p>
                 </div>
               </div>
@@ -76,7 +76,7 @@ const Contact = () => {
                   <p className="text-autism-sienna-gray">
                     Monday - Thursday: 8:00am - 7:00pm<br />
                     Friday: 8:00am - 5:00pm<br />
-                    Saturday: 9:00am - 1:00pm<br />
+                    Saturday: 9:00am - 3:00pm<br />
                     Sunday: Closed
                   </p>
                 </div>

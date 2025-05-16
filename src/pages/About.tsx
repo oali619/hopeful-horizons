@@ -17,7 +17,7 @@ const About = () => {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-autism-clay-taupe">Our Story</h2>
             <p className="mb-4">
-              Hopeful Horizons was founded in 2010 by a group of parents, educators, and healthcare professionals who recognized the need for comprehensive autism services in Minnesota. What began as a small support group has grown into a full-service center offering diagnostic, therapeutic, and educational resources for individuals on the autism spectrum.
+              Hopeful Horizons was founded by a group of parents, educators, and healthcare professionals who recognized the need for comprehensive autism services in Minnesota. What began as a small support group has grown into a full-service center offering diagnostic, therapeutic, and educational resources for individuals on the autism spectrum.
             </p>
             <p>
               Our center was built on the belief that every individual with autism deserves access to personalized, evidence-based support that recognizes their unique strengths and challenges. Today, we continue to expand our services while maintaining our commitment to excellence, compassion, and community.
@@ -75,31 +75,31 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="w-40 h-40 mx-auto rounded-full bg-autism-peach-cream mb-4 flex items-center justify-center text-autism-clay-taupe text-4xl font-bold">
-              DJ
+              AB
             </div>
-            <h3 className="text-xl font-semibold text-autism-clay-taupe">Dr. Jennifer Davis</h3>
+            <h3 className="text-xl font-semibold text-autism-clay-taupe">Abdulaziz Berento</h3>
             <p className="text-autism-soft-coral">Executive Director</p>
             <p className="mt-2 text-autism-sienna-gray">
-              Board-certified child psychologist with 15+ years of experience in autism diagnosis and intervention.
+              Psychologist with 5+ years of experience in autism diagnosis and intervention.
             </p>
           </div>
           
           <div className="text-center">
             <div className="w-40 h-40 mx-auto rounded-full bg-autism-peach-cream mb-4 flex items-center justify-center text-autism-clay-taupe text-4xl font-bold">
-              RM
+              DW
             </div>
-            <h3 className="text-xl font-semibold text-autism-clay-taupe">Dr. Robert Martinez</h3>
+            <h3 className="text-xl font-semibold text-autism-clay-taupe">Dresden Warminski, BCBA, LBA</h3>
             <p className="text-autism-soft-coral">Clinical Director</p>
             <p className="mt-2 text-autism-sienna-gray">
-              Specializing in evidence-based therapies for autism spectrum disorders with a focus on early intervention.
+              Specializing in evidence-based therapies for autism spectrum disorders with a focus on early intervention with over 10+ years of experience.
             </p>
           </div>
           
           <div className="text-center">
             <div className="w-40 h-40 mx-auto rounded-full bg-autism-peach-cream mb-4 flex items-center justify-center text-autism-clay-taupe text-4xl font-bold">
-              LP
+              OA
             </div>
-            <h3 className="text-xl font-semibold text-autism-clay-taupe">Lisa Peterson</h3>
+            <h3 className="text-xl font-semibold text-autism-clay-taupe">Obsa Ali</h3>
             <p className="text-autism-soft-coral">Family Support Director</p>
             <p className="mt-2 text-autism-sienna-gray">
               Parent advocate with extensive experience coordinating resources and support for families affected by autism.
