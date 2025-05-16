@@ -18,13 +18,29 @@ const Referral = () => {
 
   const onSubmit = (data: any) => {
     console.log(data);
-    const resend = new Resend(import.meta.env.VITE_RESEND_API_KEY);
+    const resend = new Resend('re_ZyEYR5Zb_F3tukUoguKFNirc5qkjubVr1');
 
     resend.emails.send({
       from: 'admin@hopefulhorizonsmn.com',
       to: 'admin@hopefulhorizonsmn.com',
       subject: "New Referral Submission",
-      react: <EmailTemplate data={data} />,
+      // react: <EmailTemplate data={data} />,
+      html: `
+        <div>
+          <h2>New Referral Submission</h2>
+          <p><strong>Referral Type:</strong> ${Array.isArray(data.referralType) ? data.referralType.join(", ") : data.referralType || "N/A"}</p>
+          <p><strong>Referrer Name:</strong> ${data.referrerName}</p>
+          <p><strong>Organization:</strong> ${data.referrerOrganization || "N/A"}</p>
+          <p><strong>Email:</strong> ${data.referrerEmail}</p>
+          <p><strong>Phone:</strong> ${data.referrerPhone}</p>
+          <hr />
+          <p><strong>Client Name:</strong> ${data.clientName}</p>
+          <p><strong>Client Age:</strong> ${data.clientAge}</p>
+          <p><strong>Reason for Referral:</strong> ${data.reasonForReferral}</p>
+          <p><strong>Services Interested In:</strong> ${Array.isArray(data.servicesInterested) ? data.servicesInterested.join(", ") : data.servicesInterested || "N/A"}</p>
+          <p><strong>Consent Given:</strong> ${data.consent ? "Yes" : "No"}</p>
+        </div>
+      `,
     }).catch((err: any) => {
       toast.error("There was an error sending your referral. Please try again later.");
       console.error(err);
