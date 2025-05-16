@@ -16,37 +16,40 @@ import EmailTemplate from "../components/EmailTemplate";
 const Referral = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
-  const onSubmit = (data: any) => {
-    console.log(data);
-    const resend = new Resend('re_ZyEYR5Zb_F3tukUoguKFNirc5qkjubVr1');
+  const onSubmit = async (data: any) => {
+    try {
+      console.log(data);
+      const resend = new Resend('re_ZyEYR5Zb_F3tukUoguKFNirc5qkjubVr1');
 
-    resend.emails.send({
-      from: 'admin@hopefulhorizonsmn.com',
-      to: 'admin@hopefulhorizonsmn.com',
-      subject: "New Referral Submission",
-      // react: <EmailTemplate data={data} />,
-      html: `
-        <div>
-          <h2>New Referral Submission</h2>
-          <p><strong>Referral Type:</strong> ${Array.isArray(data.referralType) ? data.referralType.join(", ") : data.referralType || "N/A"}</p>
-          <p><strong>Referrer Name:</strong> ${data.referrerName}</p>
-          <p><strong>Organization:</strong> ${data.referrerOrganization || "N/A"}</p>
-          <p><strong>Email:</strong> ${data.referrerEmail}</p>
-          <p><strong>Phone:</strong> ${data.referrerPhone}</p>
-          <hr />
-          <p><strong>Client Name:</strong> ${data.clientName}</p>
-          <p><strong>Client Age:</strong> ${data.clientAge}</p>
-          <p><strong>Reason for Referral:</strong> ${data.reasonForReferral}</p>
-          <p><strong>Services Interested In:</strong> ${Array.isArray(data.servicesInterested) ? data.servicesInterested.join(", ") : data.servicesInterested || "N/A"}</p>
-          <p><strong>Consent Given:</strong> ${data.consent ? "Yes" : "No"}</p>
-        </div>
-      `,
-    }).catch((err: any) => {
+      await resend.emails.send({
+        from: 'onboarding@resend.dev',
+        to: 'admin@hopefulhorizonsmn.com',
+        subject: "New Referral Submission",
+        // react: <EmailTemplate data={data} />,
+        html: `
+          <div>
+            <h2>New Referral Submission</h2>
+            <p><strong>Referral Type:</strong> ${Array.isArray(data.referralType) ? data.referralType.join(", ") : data.referralType || "N/A"}</p>
+            <p><strong>Referrer Name:</strong> ${data.referrerName}</p>
+            <p><strong>Organization:</strong> ${data.referrerOrganization || "N/A"}</p>
+            <p><strong>Email:</strong> ${data.referrerEmail}</p>
+            <p><strong>Phone:</strong> ${data.referrerPhone}</p>
+            <hr />
+            <p><strong>Client Name:</strong> ${data.clientName}</p>
+            <p><strong>Client Age:</strong> ${data.clientAge}</p>
+            <p><strong>Reason for Referral:</strong> ${data.reasonForReferral}</p>
+            <p><strong>Services Interested In:</strong> ${Array.isArray(data.servicesInterested) ? data.servicesInterested.join(", ") : data.servicesInterested || "N/A"}</p>
+            <p><strong>Consent Given:</strong> ${data.consent ? "Yes" : "No"}</p>
+          </div>
+        `,
+      });
+
+      toast.success("Thank you for your referral. We'll be in touch soon.");
+      reset();
+    } catch (err) {
       toast.error("There was an error sending your referral. Please try again later.");
       console.error(err);
-    });
-    toast.success("Thank you for your referral. We'll be in touch soon.");
-    reset();
+    }
   };
 
   return (
