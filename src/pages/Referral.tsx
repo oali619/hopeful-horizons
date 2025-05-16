@@ -1,5 +1,4 @@
 import React from "react";
-import { Resend } from "resend";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
@@ -18,31 +17,13 @@ const Referral = () => {
 
   const onSubmit = async (data: any) => {
     try {
-      console.log(data);
-      const resend = new Resend('re_ZyEYR5Zb_F3tukUoguKFNirc5qkjubVr1');
-
-      await resend.emails.send({
-        from: 'onboarding@resend.dev',
-        to: 'admin@hopefulhorizonsmn.com',
-        subject: "New Referral Submission",
-        // react: <EmailTemplate data={data} />,
-        html: `
-          <div>
-            <h2>New Referral Submission</h2>
-            <p><strong>Referral Type:</strong> ${Array.isArray(data.referralType) ? data.referralType.join(", ") : data.referralType || "N/A"}</p>
-            <p><strong>Referrer Name:</strong> ${data.referrerName}</p>
-            <p><strong>Organization:</strong> ${data.referrerOrganization || "N/A"}</p>
-            <p><strong>Email:</strong> ${data.referrerEmail}</p>
-            <p><strong>Phone:</strong> ${data.referrerPhone}</p>
-            <hr />
-            <p><strong>Client Name:</strong> ${data.clientName}</p>
-            <p><strong>Client Age:</strong> ${data.clientAge}</p>
-            <p><strong>Reason for Referral:</strong> ${data.reasonForReferral}</p>
-            <p><strong>Services Interested In:</strong> ${Array.isArray(data.servicesInterested) ? data.servicesInterested.join(", ") : data.servicesInterested || "N/A"}</p>
-            <p><strong>Consent Given:</strong> ${data.consent ? "Yes" : "No"}</p>
-          </div>
-        `,
+      const response = await fetch('/api/sendReferral', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
       });
+
+      if (!response.ok) throw new Error('Failed to send referral');
 
       toast.success("Thank you for your referral. We'll be in touch soon.");
       reset();
