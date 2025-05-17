@@ -10,7 +10,6 @@ import { Textarea } from "../components/ui/textarea";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "../components/ui/sonner";
-import EmailTemplate from "../components/EmailTemplate";
 
 const Referral = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -22,13 +21,17 @@ const Referral = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-
-      if (!response.ok) throw new Error('Failed to send referral');
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send referral');
+      }
 
       toast.success("Thank you for your referral. We'll be in touch soon.");
       reset();
-    } catch (err) {
-      toast.error("There was an error sending your referral. Please try again later.");
+    } catch (err: any) {
+      toast.error(err.message || "There was an error sending your referral. Please try again later.");
       console.error(err);
     }
   };

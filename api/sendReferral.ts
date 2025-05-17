@@ -1,5 +1,8 @@
+
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
+import { renderToString } from 'react-dom/server';
+import { EmailTemplate } from '../src/components/EmailTemplate';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -11,30 +14,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const data = req.body;
 
   try {
-    await resend.emails.send({
-      from: 'admin@hopefulhorizonsmn.com',
-      to: 'admin@hopefulhorizonsmn.com',
+    // Render React component to HTML string
+    const emailHtml = renderToString(
+      EmailTemplate({ data })
+    );
+
+    // Send email using Resend
+    const { data: emailData, error } = await resend.emails.send({
+      from: 'Hopeful Horizons <referrals@hopefulhorizonsmn.com>',
+      to: ['admin@hopefulhorizonsmn.com'],
       subject: "New Referral Submission",
-      html: `
-        <div>
-          <h2>New Referral Submission</h2>
-          <p><strong>Referral Type:</strong> ${Array.isArray(data.referralType) ? data.referralType.join(", ") : data.referralType || "N/A"}</p>
-          <p><strong>Referrer Name:</strong> ${data.referrerName}</p>
-          <p><strong>Organization:</strong> ${data.referrerOrganization || "N/A"}</p>
-          <p><strong>Email:</strong> ${data.referrerEmail}</p>
-          <p><strong>Phone:</strong> ${data.referrerPhone}</p>
-          <hr />
-          <p><strong>Client Name:</strong> ${data.clientName}</p>
-          <p><strong>Client Age:</strong> ${data.clientAge}</p>
-          <p><strong>Reason for Referral:</strong> ${data.reasonForReferral}</p>
-          <p><strong>Services Interested In:</strong> ${Array.isArray(data.servicesInterested) ? data.servicesInterested.join(", ") : data.servicesInterested || "N/A"}</p>
-          <p><strong>Consent Given:</strong> ${data.consent ? "Yes" : "No"}</p>
-        </div>
-      `,
+      html: emailHtml,
     });
 
-    res.status(200).json({ success: true });
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to send email' });
+    if (error) {
+      console.error('Resend API error:', error);
+      return res.status(400).json({ error });
+    }
+
+    return res.status(200).json({ success: true, id: emailData?.id });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    return res.status(500).json({ error: 'Failed to send email' });
   }
 }
