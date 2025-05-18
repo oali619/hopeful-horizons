@@ -26,5 +26,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "api"]
+  "include": ["src", "api", "app/hooks", "app/lib", "app/components/hooks", "app/components/App.tsx", "app/components/main.tsx", "app/components/vite-env.d.ts"]
 }
