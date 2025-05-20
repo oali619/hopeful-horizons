@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "remix vite:dev",
+    "build": "remix vite:build",
     "build:dev": "vite build --mode development",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "preview": "vite preview",
+		"start": "remix-serve ./build/server/index.js",
+		"typecheck": "tsc"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -39,6 +41,9 @@
     "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.4",
+    "@remix-run/node": "^2.16.6",
+    "@remix-run/react": "^2.16.6",
+    "@remix-run/serve": "^2.16.6",
     "@tanstack/react-query": "^5.56.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -46,6 +51,7 @@
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.3.0",
     "input-otp": "^1.2.4",
+    "isbot": "^4.4.0",
     "lucide-react": "^0.462.0",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
@@ -64,6 +70,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@remix-run/dev": "^2.16.6",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.5.5",
     "@types/react": "^18.3.3",
@@ -80,6 +87,6 @@
     "tailwindcss": "^3.4.11",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.19"
   }
 }

@@ -19,8 +19,9 @@ interface EmailTemplateProps {
 export const EmailTemplate: React.FC<EmailTemplateProps> = ({
   data
 }) => {
+  console.log({data});
   return (
-    <div>
+    <div> 
       <h2>New Referral Submission</h2>
       <p><strong>Referral Type:</strong> {Array.isArray(data.referralType) ? data.referralType.join(", ") : data.referralType || "N/A"}</p>
       <p><strong>Referrer Name:</strong> {data.referrerName}</p>

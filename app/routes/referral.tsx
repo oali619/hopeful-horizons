@@ -1,4 +1,13 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import {
+  ActionFunctionArgs,
+  unstable_composeUploadHandlers,
+  unstable_createFileUploadHandler,
+  unstable_createMemoryUploadHandler,
+  unstable_parseMultipartFormData,
+} from '@remix-run/node';
+import { useActionData } from '@remix-run/react';
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
@@ -10,34 +19,50 @@ import { Textarea } from "../components/ui/textarea";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "../components/ui/sonner";
+import { EmailTemplate } from "../components/EmailTemplate";
+import { Resend } from "resend";
+
+export async function action({ request }: ActionFunctionArgs) {
+  // const { reset } = useForm();
+  const uploadHandler = unstable_composeUploadHandlers(
+    unstable_createFileUploadHandler({
+      maxPartSize: 5_000_000,
+      file: ({ filename }) => filename,
+    }),
+    // parse everything else into memory
+    unstable_createMemoryUploadHandler()
+  );
+  const formData = await unstable_parseMultipartFormData(
+    request,
+    uploadHandler
+  );
+  const data = Object.fromEntries(formData.entries());
+  console.log({ data });
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const response = await resend.emails.send({
+    from: 'admin@hopefulhorizonsmn.com',
+    to: 'admin@hopefulhorizonsmn.com',
+    subject: `New Referral - ${data.clientName}`,
+    react: <EmailTemplate data={data} referral={true} />,
+  });
+  // reset();
+  return response;
+}
 
 const Referral = () => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const { register, formState: { errors } } = useForm();
+  const [referralSent, setReferralSent] = useState(false);
+  const [referralFailed, setReferralFailed] = useState(false);
+  const response = useActionData<typeof action>();
 
-  const onSubmit = async (data: any) => {
-    try {
-      const response = await fetch('/api/sendReferral', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-      
-      const result = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to send referral');
-      }
-
-      toast.success("Thank you for your referral. We'll be in touch soon.");
-      reset();
-    } catch (err: any) {
-      toast.error(err.message || "There was an error sending your referral. Please try again later.");
-      console.error(err);
-    }
-  };
-
+  useEffect(() => {
+    response?.data?.id && setReferralSent(true);
+    response?.error && setReferralFailed(true);
+  }, [response]); 
   return (
     <Layout>
+      {referralSent && toast.success('Referral sent successfully.')}
+      {referralFailed && toast.error('Referral failed to send. Please try again.')}
       <Hero
         title="Make a Referral"
         subtitle="We're here to help families find the support they need"
@@ -102,7 +127,13 @@ const Referral = () => {
 
           <div className="bg-white p-6 rounded-lg shadow-md border border-border">
             <h3 className="text-xl font-semibold mb-4 text-primary">Referral Form</h3>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+            <form
+              action='/referral'
+              method='POST'
+              encType='multipart/form-data'
+              id='referral_form'
+              className="space-y-5"
+            >
               <div className="space-y-1.5">
                 <Label htmlFor="referralType">Referral Type</Label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -206,7 +237,11 @@ const Referral = () => {
               </div>
 
               <div className="pt-2">
-                <Button type="submit" className="w-full bg-accent text-neutral-dark hover:bg-accent/80">
+                <Button
+                  onClick={() => toast.success('Referral submission pending...')}
+                  type="submit"
+                  className="w-full bg-accent text-neutral-dark hover:bg-accent/80"
+                >
                   Submit Referral
                 </Button>
               </div>
@@ -229,3 +264,7 @@ const Referral = () => {
 };
 
 export default Referral;
+function useEffects(arg0: () => void, arg1: any[]) {
+  throw new Error("Function not implemented.");
+}
+

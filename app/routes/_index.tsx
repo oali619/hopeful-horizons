@@ -8,6 +8,7 @@ import TestimonialCard from "../components/TestimonialCard";
 import { Link } from "react-router-dom";
 import { Users, Book, Calendar, MapPin } from "lucide-react";
 
+
 const Index = () => {
   return (
     <Layout>
