@@ -137,18 +137,8 @@ const Contact = () => {
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-autism-clay-taupe text-center">Find Us</h2>
         <div className="rounded-lg overflow-hidden border-4 border-white shadow-lg">
           <div className="aspect-[16/9] w-full bg-autism-powder-apricot flex items-center justify-center">
-            <p className="text-autism-clay-taupe font-medium">[Map Placeholder - Google Maps would be embedded here]</p>
+          <iframe width="100%" height="100%" title="Hopeful Horizons" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1710%20Douglas%20Dr%20Golden%20Valley,%20MN%2055422+(Hopeful%20Horizons)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
           </div>
-        </div>
-        <div className="mt-6 text-center">
-          <a
-            href="https://maps.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="autism-link"
-          >
-            Get Directions
-          </a>
         </div>
       </Section>
 
