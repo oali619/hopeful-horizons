@@ -23,7 +23,6 @@ import { EmailTemplate } from "../components/EmailTemplate";
 import { Resend } from "resend";
 
 export async function action({ request }: ActionFunctionArgs) {
-  // const { reset } = useForm();
   const uploadHandler = unstable_composeUploadHandlers(
     unstable_createFileUploadHandler({
       maxPartSize: 5_000_000,
@@ -45,7 +44,6 @@ export async function action({ request }: ActionFunctionArgs) {
     subject: `New Referral - ${data.clientName}`,
     react: <EmailTemplate data={data} referral={true} />,
   });
-  // reset();
   return response;
 }
 
@@ -58,7 +56,8 @@ const Referral = () => {
   useEffect(() => {
     response?.data?.id && setReferralSent(true);
     response?.error && setReferralFailed(true);
-  }, [response]); 
+  }, [response]);
+
   return (
     <Layout>
       {referralSent && toast.success('Referral sent successfully.')}

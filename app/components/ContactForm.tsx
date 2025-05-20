@@ -9,40 +9,19 @@ const ContactForm = () => {
     subject: '',
     message: '',
   });
-  
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Normally we would post to an API here
-    setSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-      });
-    }, 3000);
-  };
-
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      {submitted ? (
-        <div className="autism-highlight text-center py-8 animate-fade-in">
-          <h3 className="text-xl font-semibold mb-2">Thank you for reaching out!</h3>
-          <p>We'll get back to you as soon as possible.</p>
-        </div>
-      ) : (
+    <form
+      action='/contact'
+      method='POST'
+      encType='multipart/form-data'
+      className="space-y-6"
+    >
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -70,7 +49,7 @@ const ContactForm = () => {
               />
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="phone" className="block mb-2 font-medium">Phone (Optional)</label>
@@ -102,7 +81,7 @@ const ContactForm = () => {
               </select>
             </div>
           </div>
-          
+
           <div>
             <label htmlFor="message" className="block mb-2 font-medium">Message</label>
             <textarea
@@ -115,14 +94,13 @@ const ContactForm = () => {
               className="w-full p-3 border border-autism-sienna-gray rounded-md focus:outline-none focus:ring-2 focus:ring-autism-peach-cream"
             ></textarea>
           </div>
-          
+
           <div className="flex justify-center md:justify-start">
             <button type="submit" className="autism-btn-primary">
               Send Message
             </button>
           </div>
         </>
-      )}
     </form>
   );
 };
