@@ -117,9 +117,11 @@ const Referral = () => {
                 <Button className="bg-primary text-white hover:bg-interactive-hover">
                   <Link to="/contact">Contact Us</Link>
                 </Button>
+                <a href="tel:+16122222817">
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
                   Call (612) 222-2817
                 </Button>
+                </a>
               </div>
             </div>
           </div>
