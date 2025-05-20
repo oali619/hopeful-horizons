@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ActionFunctionArgs,
   unstable_composeUploadHandlers,
@@ -51,43 +51,18 @@ export async function action({ request }: ActionFunctionArgs) {
 
 const Referral = () => {
   const { register, formState: { errors } } = useForm();
-  console.log({ errors });
   const [referralSent, setReferralSent] = useState(false);
   const [referralFailed, setReferralFailed] = useState(false);
-
   const response = useActionData<typeof action>();
 
-  // useEffect(() => {
-  //   response?.data?.id && setReferralSent(true);
-  //   response?.error && setReferralFailed(true);
-  // }, [response]);
-
-  // const onSubmit = async (data: any) => {
-  //   try {
-  //     const response = await fetch('/api/sendReferral', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify(data),
-  //     });
-
-  //     const result = await response.json();
-
-  //     if (!response.ok) {
-  //       throw new Error(result.error || 'Failed to send referral');
-  //     }
-
-  //     toast.success("Thank you for your referral. We'll be in touch soon.");
-  //     reset();
-  //   } catch (err: any) {
-  //     toast.error(err.message || "There was an error sending your referral. Please try again later.");
-  //     console.error(err);
-  //   }
-  // };
-
+  useEffect(() => {
+    response?.data?.id && setReferralSent(true);
+    response?.error && setReferralFailed(true);
+  }, [response]); 
   return (
     <Layout>
-      {/* {referralSent && toast.success('Referral sent successfully.')}
-      {referralFailed && toast.error('Referral failed to send. Please try again.')} */}
+      {referralSent && toast.success('Referral sent successfully.')}
+      {referralFailed && toast.error('Referral failed to send. Please try again.')}
       <Hero
         title="Make a Referral"
         subtitle="We're here to help families find the support they need"
@@ -157,7 +132,6 @@ const Referral = () => {
               method='POST'
               encType='multipart/form-data'
               id='referral_form'
-              // onSubmit={handleSubmit(onSubmit)}
               className="space-y-5"
             >
               <div className="space-y-1.5">
@@ -264,7 +238,7 @@ const Referral = () => {
 
               <div className="pt-2">
                 <Button
-                  // onClick={() => toast.success('Referral submission pending...')}
+                  onClick={() => toast.success('Referral submission pending...')}
                   type="submit"
                   className="w-full bg-accent text-neutral-dark hover:bg-accent/80"
                 >
@@ -290,7 +264,7 @@ const Referral = () => {
 };
 
 export default Referral;
-function useEffect(arg0: () => void, arg1: any[]) {
+function useEffects(arg0: () => void, arg1: any[]) {
   throw new Error("Function not implemented.");
 }
 
