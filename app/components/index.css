@@ -16,24 +16,24 @@
     --popover: 23 86% 97%;     /* Warm Mist */
     --popover-foreground: 20 22% 39%;  /* Clay Taupe */
 
-    --primary: 19 77% 83%;     /* Peach Cream */
-    --primary-foreground: 20 22% 39%;  /* Clay Taupe */
+    --primary: 201 100% 36%;   /* Autism Blue */
+    --primary-foreground: 210 40% 98%; /* White */
 
-    --secondary: 8 79% 72%;    /* Soft Coral */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 45 100% 62%;  /* Autism Yellow */
+    --secondary-foreground: 20 22% 39%; /* Clay Taupe */
 
     --muted: 23 77% 89%;       /* Powder Apricot */
     --muted-foreground: 23 17% 59%;  /* Sienna Gray */
 
-    --accent: 37 100% 84%;     /* Honey Blush */
+    --accent: 19 77% 83%;      /* Peach Cream */
     --accent-foreground: 20 22% 39%;  /* Clay Taupe */
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 356 80% 56%; /* Autism Red */
     --destructive-foreground: 210 40% 98%;
 
     --border: 23 17% 59%;      /* Sienna Gray */
     --input: 23 17% 59%;       /* Sienna Gray */
-    --ring: 19 77% 83%;        /* Peach Cream */
+    --ring: 201 100% 36%;      /* Autism Blue */
 
     --radius: 0.5rem;
   }
@@ -60,7 +60,7 @@
   }
   
   .autism-btn-primary {
-    @apply bg-autism-peach-cream hover:bg-autism-soft-coral text-autism-clay-taupe font-medium px-5 py-2.5 rounded-md transition-colors;
+    @apply bg-autism-blue hover:bg-autism-peach-cream text-white font-medium px-5 py-2.5 rounded-md transition-colors;
   }
   
   .autism-btn-secondary {
