@@ -64,15 +64,20 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				// Custom color scheme
-				autism: {
-					'peach-cream': '#F6BFA6', // Primary brand color
-					'soft-coral': '#F48C7F',  // Secondary accent
-					'warm-mist': '#FFF4EE',   // Calming balance/background
-					'honey-blush': '#FFDFAF', // Highlight/call-out
-					'powder-apricot': '#FAD6C4', // Support accent
-					'clay-taupe': '#7A5B4C',  // Accessible text/borders
-					'sienna-gray': '#A88C80', // Gentle contrast
-				}
+                                autism: {
+                                        'peach-cream': '#F6BFA6', // Primary brand color
+                                        'soft-coral': '#F48C7F',  // Secondary accent
+                                        'warm-mist': '#FFF4EE',   // Calming balance/background
+                                        'honey-blush': '#FFDFAF', // Highlight/call-out
+                                        'powder-apricot': '#FAD6C4', // Support accent
+                                        'clay-taupe': '#7A5B4C',  // Accessible text/borders
+                                        'sienna-gray': '#A88C80', // Gentle contrast
+                                        // National autism colors
+                                        blue: '#0077B6',
+                                        yellow: '#FFD23F',
+                                        red: '#E63946',
+                                        navy: '#1D3557',
+                                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
