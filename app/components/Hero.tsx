@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import hopefulHorizonsLogo from '../images/hopeful-horizons-logo.png';
+import hopefulHorizonsLogo from '../images/logo-alternate.png';
 
 interface HeroProps {
   title: string;
@@ -18,14 +18,14 @@ const Hero: React.FC<HeroProps> = ({
   image = hopefulHorizonsLogo,
 }) => {
   return (
-    <div className="relative bg-autism-warm-mist overflow-hidden">
+    <div className="bg-autism-neutral-light relative overflow-hidden">
       <div className="autism-container py-12 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold text-autism-clay-taupe leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-autism-neutral-dark leading-tight">
               {title}
             </h1>
-            <p className="text-xl md:text-2xl text-autism-sienna-gray">
+            <p className="text-xl md:text-2xl text-autism-neutral-dark">
               {subtitle}
             </p>
             {ctaText && (
@@ -45,15 +45,13 @@ const Hero: React.FC<HeroProps> = ({
                 className="rounded-lg max-h-[400px] w-auto object-cover shadow-lg border-4 border-white"
               />
             ) : (
-              <div className="aspect-video w-full max-w-lg bg-autism-peach-cream rounded-lg flex items-center justify-center text-autism-clay-taupe">
+              <div className="aspect-video w-full max-w-lg bg-autism-bright-blue rounded-lg flex items-center justify-center">
                 <span className="text-xl font-semibold">Hopeful Horizons</span>
               </div>
             )}
           </div>
         </div>
       </div>
-      
-      <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white to-transparent"></div>
     </div>
   );
 };
