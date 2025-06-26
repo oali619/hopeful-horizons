@@ -33,7 +33,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-autism-sienna-gray rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"
+                className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"
               />
             </div>
             <div>
@@ -45,7 +45,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-autism-sienna-gray rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"
+                className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"
               />
             </div>
           </div>
@@ -59,7 +59,7 @@ const ContactForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full p-3 border border-autism-sienna-gray rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"
+                className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"
               />
             </div>
             <div>
@@ -70,7 +70,7 @@ const ContactForm = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-autism-sienna-gray rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"
+                className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"
               >
                 <option value="">Please select</option>
                 <option value="General Inquiry">General Inquiry</option>
@@ -92,7 +92,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               rows={5}
-              className="w-full p-3 border border-autism-sienna-gray rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"
+              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"
             ></textarea>
           </div>
 

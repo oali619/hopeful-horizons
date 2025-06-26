@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-autism-sienna-gray mt-8 pt-8 text-center">
+        <div className="border-t mt-8 pt-8 text-center">
           <p>&copy; {currentYear} Hopeful Horizons LLC. All rights reserved.</p>
         </div>
       </div>

@@ -16,7 +16,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, author, role }
           <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
         </svg>
       </div>
-      <p className="italic text-autism-sienna-gray mb-6">{quote}</p>
+      <p className="italic text-autism-complementary-text mb-6">{quote}</p>
       <div className="flex items-center">
         <div className="h-10 w-10 rounded-full bg-autism-bright-blue flex items-center justify-center font-bold">
           {author.charAt(0)}

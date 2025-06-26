@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, lin
         </div>
       )}
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-autism-sienna-gray flex-grow">{description}</p>
+      <p className="text-autism-complementary-text flex-grow">{description}</p>
       {link && (
         <div className="mt-4 pt-2">
           <span className="autism-link">Learn more</span>

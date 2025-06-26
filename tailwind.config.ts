@@ -82,7 +82,7 @@ export default {
 					// 'honey-blush': '#FFDFAF', // Highlight/call-out
 					// 'powder-apricot': '#FAD6C4', // Support accent
 					// 'clay-taupe': '#7A5B4C',  // Accessible text/borders
-					'sienna-gray': '#A88C80', // Gentle contrast
+					// 'sienna-gray': '#A88C80', // Gentle contrast
 				}
 			},
 			borderRadius: {
