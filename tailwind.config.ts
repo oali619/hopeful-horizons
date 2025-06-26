@@ -65,13 +65,24 @@ export default {
 				},
 				// Custom color scheme
 				autism: {
-					'peach-cream': '#F6BFA6', // Primary brand color
-					'soft-coral': '#F48C7F',  // Secondary accent
-					'warm-mist': '#FFF4EE',   // Calming balance/background
-					'honey-blush': '#FFDFAF', // Highlight/call-out
-					'powder-apricot': '#FAD6C4', // Support accent
-					'clay-taupe': '#7A5B4C',  // Accessible text/borders
-					'sienna-gray': '#A88C80', // Gentle contrast
+					'light-gray': '#F5F5F5', // Light gray background
+					'complementary-text': '#1A3A5D', // Complementary text color for contrast
+					'bright-blue': '#0080C6', // Headlines, links, primary buttons
+					'accent-cta': '#FFC20E', // Call-to-action buttons, highlights, icons
+					'white': '#FFFFFF', // Page background, card backgrounds
+					'neutral-light': '#F4F6F8', // Section backgrounds, form fields
+					'neutral-dark': '#2E3A46', // Body text, footer background
+					'neutral-dark2': '#425262', // Body text, footer background (lighter than #2E3A46)
+					'interactive-hover': '#66AEDD', // Button hover, link hover
+					'border-divider': '#D0E6F2', // Border & Divider
+					
+					// 'peach-cream': '#F6BFA6', // Primary brand color
+					// 'soft-coral': '#F48C7F',  // Secondary accent
+					// 'warm-mist': '#FFF4EE',   // Calming balance/background
+					// 'honey-blush': '#FFDFAF', // Highlight/call-out
+					// 'powder-apricot': '#FAD6C4', // Support accent
+					// 'clay-taupe': '#7A5B4C',  // Accessible text/borders
+					// 'sienna-gray': '#A88C80', // Gentle contrast
 				}
 			},
 			borderRadius: {

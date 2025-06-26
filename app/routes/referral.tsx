@@ -21,6 +21,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "../components/ui/sonner";
 import { EmailTemplate } from "../components/EmailTemplate";
 import { Resend } from "resend";
+import autismImg9 from "../images/autism9.jpg";
 
 export async function action({ request }: ActionFunctionArgs) {
   const uploadHandler = unstable_composeUploadHandlers(
@@ -67,6 +68,7 @@ const Referral = () => {
         subtitle="We're here to help families find the support they need"
         ctaText=""
         ctaLink=""
+        image={autismImg9}
       />
 
       <Section
@@ -118,9 +120,9 @@ const Referral = () => {
                   <Link to="/contact">Contact Us</Link>
                 </Button>
                 <a href="tel:+16122222817">
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                  Call (612) 222-2817
-                </Button>
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                    Call (612) 222-2817
+                  </Button>
                 </a>
               </div>
             </div>
@@ -251,7 +253,7 @@ const Referral = () => {
         </div>
       </Section>
 
-      <Section color="alternate" className="text-center">
+      {/* <Section color="alternate" className="text-center">
         <h3 className="text-2xl font-semibold mb-4">Thank You for Your Referral</h3>
         <p className="max-w-2xl mx-auto mb-6">
           Your referral helps us connect families with the support they need. We value your trust and will handle all information with the utmost confidentiality and care.
@@ -259,7 +261,7 @@ const Referral = () => {
         <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
           <Link to="/contact">Contact Us With Questions</Link>
         </Button>
-      </Section>
+      </Section> */}
     </Layout>
   );
 };

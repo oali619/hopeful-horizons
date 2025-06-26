@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import hopefulHorizonsLogo from '../images/hopeful-horizons2.png';
+import xyz from '../images/logo-no-text-alternate.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
     { title: "Home", path: "/" },
     { title: "About", path: "/about" },
     { title: "Services", path: "/services" },
-    { title: "Resources", path: "/resources" },
+    // { title: "Resources", path: "/resources" },
     { title: "Referral", path: "/referral" },
     { title: "Contact", path: "/contact" },
   ];
@@ -25,8 +26,8 @@ const Navbar = () => {
     <nav className="bg-white border-b border-border sticky top-0 z-50 shadow-sm">
       <div className="autism-container flex justify-between items-center py-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">HH</div>
-          <span className="text-xl font-bold text-neutral-dark">Hopeful Horizons</span>
+          <img src={xyz} alt="Hopeful Horizons Logo" className="h-[5rem]" />
+          <span className="text-3xl font-bold text-autism-bright-blue">Hopeful Horizons</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -35,7 +36,7 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`text-neutral-dark hover:text-primary transition-colors ${
+              className={`text-primary hover:text-secondary transition-colors ${
                 isActive(link.path) ? "font-semibold border-b-2 border-primary" : ""
               }`}
             >

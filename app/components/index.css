@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -7,33 +6,35 @@
 
 @layer base {
   :root {
-    --background: 23 86% 97%;  /* Warm Mist */
-    --foreground: 20 22% 39%;  /* Clay Taupe */
+    --primary: 201 100% 39%;      /* #0080C6 Bright Blue */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF White */
 
-    --card: 23 77% 89%;        /* Powder Apricot */
-    --card-foreground: 20 22% 39%;  /* Clay Taupe */
+    --accent: 46 100% 53%;        /* #FFC20E Sun Yellow */
+    --accent-foreground: 201 100% 39%; /* #0080C6 Bright Blue */
 
-    --popover: 23 86% 97%;     /* Warm Mist */
-    --popover-foreground: 20 22% 39%;  /* Clay Taupe */
+    --background: 0 0% 100%;      /* #FFFFFF White */
+    --foreground: 213 24% 22%;    /* #2E3A46 Slate Gray */
 
-    --primary: 19 77% 83%;     /* Peach Cream */
-    --primary-foreground: 20 22% 39%;  /* Clay Taupe */
+    --card: 0 0% 100%;            /* #FFFFFF White */
+    --card-foreground: 213 24% 22%; /* #2E3A46 Slate Gray */
 
-    --secondary: 8 79% 72%;    /* Soft Coral */
-    --secondary-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;         /* #FFFFFF White */
+    --popover-foreground: 213 24% 22%; /* #2E3A46 Slate Gray */
 
-    --muted: 23 77% 89%;       /* Powder Apricot */
-    --muted-foreground: 23 17% 59%;  /* Sienna Gray */
+    --muted: 210 28% 96%;         /* #F4F6F8 Cool Gray */
+    --muted-foreground: 213 24% 22%; /* #2E3A46 Slate Gray */
 
-    --accent: 37 100% 84%;     /* Honey Blush */
-    --accent-foreground: 20 22% 39%;  /* Clay Taupe */
+    --secondary: 46 100% 53%;     /* #FFC20E Sun Yellow */
+    --secondary-foreground: 213 24% 22%; /* #2E3A46 Slate Gray */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;     /* Red for errors */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 23 17% 59%;      /* Sienna Gray */
-    --input: 23 17% 59%;       /* Sienna Gray */
-    --ring: 19 77% 83%;        /* Peach Cream */
+    --border: 201 62% 87%;        /* #D0E6F2 Light Blue */
+    --input: 201 62% 87%;         /* #D0E6F2 Light Blue */
+    --ring: 201 100% 39%;         /* #0080C6 Bright Blue */
+
+    --interactive-hover: 204 68% 65%; /* #66AEDD Soft Blue */
 
     --radius: 0.5rem;
   }
@@ -45,7 +46,7 @@
   }
 
   body {
-    @apply bg-autism-warm-mist text-autism-clay-taupe;
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -54,28 +55,28 @@
   .autism-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+
   .autism-heading {
-    @apply text-autism-clay-taupe font-semibold;
+    @apply text-[hsl(var(--primary))] font-semibold;
   }
-  
+
   .autism-btn-primary {
-    @apply bg-autism-peach-cream hover:bg-autism-soft-coral text-autism-clay-taupe font-medium px-5 py-2.5 rounded-md transition-colors;
+    @apply bg-[hsl(var(--primary))] hover:bg-[hsl(var(--interactive-hover))] text-[hsl(var(--primary-foreground))] font-medium px-5 py-2.5 rounded-md transition-colors;
   }
-  
+
   .autism-btn-secondary {
-    @apply bg-autism-powder-apricot hover:bg-autism-peach-cream text-autism-clay-taupe font-medium px-5 py-2.5 rounded-md transition-colors;
+    @apply bg-[hsl(var(--accent))] hover:bg-[hsl(var(--interactive-hover))] text-[hsl(var(--accent-foreground))] font-medium px-5 py-2.5 rounded-md transition-colors;
   }
-  
+
   .autism-card {
-    @apply bg-white rounded-lg border border-autism-powder-apricot shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-[hsl(var(--card))] rounded-lg border border-[hsl(var(--border))] shadow-sm hover:shadow-md transition-shadow;
   }
-  
+
   .autism-highlight {
-    @apply bg-autism-honey-blush rounded-md p-4;
+    @apply bg-[hsl(var(--accent))] rounded-md p-4 text-[hsl(var(--accent-foreground))];
   }
-  
+
   .autism-link {
-    @apply text-autism-soft-coral hover:text-autism-peach-cream underline transition-colors font-medium;
+    @apply text-[hsl(var(--primary))] hover:text-[hsl(var(--interactive-hover))] underline transition-colors font-medium;
   }
 }

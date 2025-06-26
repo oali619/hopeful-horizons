@@ -104,9 +104,9 @@ const Resources = () => {
             <div className="sticky top-24">
               <div className="flex items-center gap-3 mb-6">
                 <Calendar size={32} className="text-autism-soft-coral" />
-                <h2 className="text-2xl md:text-3xl font-bold text-autism-clay-taupe">Upcoming Events</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">Upcoming Events</h2>
               </div>
-              <p className="mb-6 text-autism-sienna-gray">
+              <p className="mb-6 text-autism-complementary-text">
                 Join us for these informative and supportive events at our center. Registration is required for all workshops.
               </p>
               <Link to="/contact" className="autism-btn-primary block text-center">
@@ -118,8 +118,8 @@ const Resources = () => {
           <div className="md:w-2/3 space-y-6">
             {upcomingEvents.map((event, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-autism-powder-apricot">
-                <h3 className="text-xl font-semibold mb-2 text-autism-clay-taupe">{event.title}</h3>
-                <div className="flex flex-wrap gap-x-8 gap-y-2 mb-4 text-autism-sienna-gray">
+                <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
+                <div className="flex flex-wrap gap-x-8 gap-y-2 mb-4 text-autism-complementary-text">
                   <div className="flex items-center gap-2">
                     <Calendar size={16} className="text-autism-soft-coral" />
                     <span>{event.date}</span>
@@ -131,7 +131,7 @@ const Resources = () => {
                     <span>{event.location}</span>
                   </div>
                 </div>
-                <p className="text-autism-sienna-gray">{event.description}</p>
+                <p className="text-autism-complementary-text">{event.description}</p>
               </div>
             ))}
           </div>
@@ -144,9 +144,9 @@ const Resources = () => {
             <div className="sticky top-24">
               <div className="flex items-center gap-3 mb-6">
                 <BookOpen size={32} className="text-autism-soft-coral" />
-                <h2 className="text-2xl md:text-3xl font-bold text-autism-clay-taupe">Educational Materials</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">Educational Materials</h2>
               </div>
-              <p className="mb-6 text-autism-sienna-gray">
+              <p className="mb-6 text-autism-complementary-text">
                 Free downloadable resources to help you better understand autism and implement effective strategies at home and in the community.
               </p>
             </div>
@@ -155,10 +155,10 @@ const Resources = () => {
           <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
             {educationalResources.map((resource, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-autism-powder-apricot">
-                <h3 className="text-lg font-semibold mb-2 text-autism-clay-taupe">{resource.title}</h3>
-                <p className="mb-4 text-autism-sienna-gray">{resource.description}</p>
+                <h3 className="text-lg font-semibold mb-2">{resource.title}</h3>
+                <p className="mb-4 text-autism-complementary-text">{resource.description}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm bg-autism-honey-blush text-autism-clay-taupe px-3 py-1 rounded-full">
+                  <span className="text-sm bg-autism-honey-blush px-3 py-1 rounded-full">
                     {resource.type}
                   </span>
                   <button className="flex items-center gap-2 text-autism-soft-coral hover:text-autism-peach-cream transition-colors">
@@ -178,9 +178,9 @@ const Resources = () => {
             <div className="sticky top-24">
               <div className="flex items-center gap-3 mb-6">
                 <Info size={32} className="text-autism-soft-coral" />
-                <h2 className="text-2xl md:text-3xl font-bold text-autism-clay-taupe">Community Resources</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">Community Resources</h2>
               </div>
-              <p className="mb-6 text-autism-sienna-gray">
+              <p className="mb-6 text-autism-complementary-text">
                 Connect with these valuable organizations and services in Minnesota that provide additional support for individuals with autism and their families.
               </p>
             </div>
@@ -189,8 +189,8 @@ const Resources = () => {
           <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
             {communityResources.map((resource, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-autism-powder-apricot">
-                <h3 className="text-lg font-semibold mb-2 text-autism-clay-taupe">{resource.title}</h3>
-                <p className="mb-4 text-autism-sienna-gray">{resource.description}</p>
+                <h3 className="text-lg font-semibold mb-2">{resource.title}</h3>
+                <p className="mb-4 text-autism-complementary-text">{resource.description}</p>
                 <div className="flex justify-end">
                   <a 
                     href={resource.link} 
@@ -213,7 +213,7 @@ const Resources = () => {
         className="text-center"
       >
         <div className="max-w-3xl mx-auto bg-autism-honey-blush p-8 rounded-lg">
-          <h2 className="text-2xl font-bold text-autism-clay-taupe mb-4">
+          <h2 className="text-2xl font-bold mb-4">
             Resource Library
           </h2>
           <p className="text-lg mb-6">

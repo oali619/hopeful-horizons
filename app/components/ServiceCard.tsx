@@ -13,12 +13,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, lin
   const content = (
     <div className="autism-card h-full p-6 flex flex-col">
       {icon && (
-        <div className="mb-4 text-autism-peach-cream">
+        <div className="mb-4 text-autism-bright-blue">
           {icon}
         </div>
       )}
-      <h3 className="text-xl font-semibold mb-3 text-autism-clay-taupe">{title}</h3>
-      <p className="text-autism-sienna-gray flex-grow">{description}</p>
+      <h3 className="text-xl font-semibold mb-3">{title}</h3>
+      <p className="text-autism-complementary-text flex-grow">{description}</p>
       {link && (
         <div className="mt-4 pt-2">
           <span className="autism-link">Learn more</span>
