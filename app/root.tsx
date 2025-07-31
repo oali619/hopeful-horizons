@@ -14,6 +14,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 		<html lang='en'>
 			<head>
 				<meta charSet='utf-8' />
+				<meta name='keywords' content='Autism, ABA, Minnesota, Twin-Cities, Support,Therapy, Resources, Children, Social work' />
+				<meta name='description' content='Compassionate autism support, ABA therapy, resources, and services for individuals and families in Minnesota.' />
+				<meta name='robots' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<Meta />
 				<Links />
