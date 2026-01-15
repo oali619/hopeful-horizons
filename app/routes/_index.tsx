@@ -1,4 +1,5 @@
 import React from "react";
+import type { MetaFunction } from "@remix-run/node";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
@@ -6,16 +7,43 @@ import ServiceCard from "../components/ServiceCard";
 import TestimonialCard from "../components/TestimonialCard";
 import { Link } from "react-router-dom";
 import { Users, Book, Calendar, MapPin } from "lucide-react";
-import autismImg0 from "../images/autism0.jpg"
-import autismImg1 from "../images/autism1.jpg"
-import autismImg2 from "../images/autism2.jpg"
+import autismImg0 from "../images/autism0.jpg";
+import autismImg1 from "../images/autism1.jpg";
+import autismImg2 from "../images/autism2.jpg";
+
+const siteUrl = "https://hopefulhorizonsmn.com";
+
+export const meta: MetaFunction = () => [
+  { title: "Hopeful Horizons | Autism & ABA Center in the Twin Cities" },
+  {
+    name: "description",
+    content:
+      "Autism and ABA therapy center serving Minneapolis, St. Paul, and the Twin Cities with evaluations, therapy, and family support.",
+  },
+  {
+    name: "keywords",
+    content:
+      "autism center, ABA therapy, Minneapolis, St. Paul, Twin Cities, diagnostic evaluations, family support",
+  },
+  {
+    property: "og:title",
+    content: "Hopeful Horizons | Autism & ABA Center in Minneapolis-St. Paul",
+  },
+  {
+    property: "og:description",
+    content:
+      "Autism and ABA therapy center serving Minneapolis, St. Paul, and the Twin Cities with evaluations, therapy, and family support.",
+  },
+  { property: "og:type", content: "website" },
+  { property: "og:url", content: siteUrl },
+];
 
 const Index = () => {
   return (
     <Layout>
       <Hero
         title="Supporting Every Journey on the Autism Spectrum"
-        subtitle="Compassionate care, personalized support, and community resources for individuals and families in Minnesota."
+        subtitle="Compassionate ABA therapy and autism support for families in the Twin Cities."
         ctaText="Discover Our Services"
         ctaLink="/services"
         image={autismImg0}
@@ -23,7 +51,7 @@ const Index = () => {
 
       <Section
         title="Welcome to Hopeful Horizons"
-        subtitle="We're dedicated to providing comprehensive support, resources, and services for individuals with autism and their families across Minnesota."
+        subtitle="We're dedicated to providing comprehensive support, resources, and services for individuals with autism and their families across the Greater Minneapolis-St. Paul area."
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="autism-card p-6 text-center flex flex-col items-center">
@@ -32,7 +60,8 @@ const Index = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
             <p className="text-autism-neutral-dark2">
-              Our dedicated specialists bring years of experience and compassion to every interaction.
+              Our dedicated specialists bring years of experience and compassion
+              to every interaction.
             </p>
           </div>
 
@@ -40,9 +69,12 @@ const Index = () => {
             <div className="mb-4 flex justify-center">
               <Book size={48} className="text-autism-accent-cta" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Evidence-Based Approach</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              Evidence-Based Approach
+            </h3>
             <p className="text-autism-neutral-dark2">
-              We utilize proven methodologies tailored to each individual's unique needs.
+              We utilize proven methodologies tailored to each individual's
+              unique needs.
             </p>
           </div>
 
@@ -52,12 +84,12 @@ const Index = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2">Community Focused</h3>
             <p className="text-autism-neutral-dark2">
-              Proudly serving the Minnesota community with accessible resources and support.
+              Proudly serving the Minnesota community with accessible resources
+              and support.
             </p>
           </div>
         </div>
       </Section>
-
 
       <Section
         color="alternate"
@@ -107,7 +139,8 @@ const Index = () => {
             Ready to Take the Next Step?
           </h2>
           <p className="text-lg mb-8 text-autism-neutral-dark">
-            Contact us today to learn more about our services or to schedule a consultation with our team of specialists.
+            Contact us today to learn more about our services or to schedule a
+            consultation with our team of specialists.
           </p>
           <Link to="/contact" className="autism-btn-primary text-lg px-8 py-3">
             Contact Us

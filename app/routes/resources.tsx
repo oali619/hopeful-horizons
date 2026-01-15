@@ -1,9 +1,33 @@
 import React from "react";
+import type { MetaFunction } from "@remix-run/node";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
 import { BookOpen, Calendar, Info, Download, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+
+const siteUrl = "https://hopefulhorizonsmn.com/resources";
+
+export const meta: MetaFunction = () => [
+  { title: "Autism Resources & Events | Minneapolis-St. Paul | Hopeful Horizons" },
+  {
+    name: "description",
+    content:
+      "Autism resources, workshops, and community connections for families in Minneapolis, St. Paul, and the Twin Cities.",
+  },
+  {
+    name: "keywords",
+    content: "autism resources, ABA workshops, Twin Cities events, Minneapolis St. Paul autism support",
+  },
+  { property: "og:title", content: "Autism Resources & Events | Minneapolis-St. Paul | Hopeful Horizons" },
+  {
+    property: "og:description",
+    content:
+      "Autism resources, workshops, and community connections for families in Minneapolis, St. Paul, and the Twin Cities.",
+  },
+  { property: "og:type", content: "website" },
+  { property: "og:url", content: siteUrl },
+];
 
 const Resources = () => {
   const upcomingEvents = [
@@ -95,7 +119,7 @@ const Resources = () => {
     <Layout>
       <Hero
         title="Resources"
-        subtitle="Educational materials, upcoming events, and community connections to support your journey"
+        subtitle="Educational materials, upcoming events, and Twin Cities community connections to support your journey"
       />
       
       <Section id="upcoming-events">

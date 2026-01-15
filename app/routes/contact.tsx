@@ -1,5 +1,6 @@
 
 import React from "react";
+import type { MetaFunction } from "@remix-run/node";
 import { useState, useEffect } from "react";
 import {
   ActionFunctionArgs,
@@ -17,6 +18,29 @@ import Hero from "../components/Hero";
 import Section from "../components/Section";
 import ContactForm from "../components/ContactForm";
 import { EmailTemplate } from '../components/EmailTemplate';
+
+const siteUrl = "https://hopefulhorizonsmn.com/contact";
+
+export const meta: MetaFunction = () => [
+  { title: "Contact Our Autism & ABA Center | Minneapolis-St. Paul | Hopeful Horizons" },
+  {
+    name: "description",
+    content:
+      "Contact Hopeful Horizons to schedule autism evaluations or ABA therapy in Minneapolis, St. Paul, and the Twin Cities.",
+  },
+  {
+    name: "keywords",
+    content: "contact ABA center, autism evaluations Minneapolis, ABA therapy St. Paul, Twin Cities",
+  },
+  { property: "og:title", content: "Contact Our Autism & ABA Center | Minneapolis-St. Paul | Hopeful Horizons" },
+  {
+    property: "og:description",
+    content:
+      "Contact Hopeful Horizons to schedule autism evaluations or ABA therapy in Minneapolis, St. Paul, and the Twin Cities.",
+  },
+  { property: "og:type", content: "website" },
+  { property: "og:url", content: siteUrl },
+];
 
 export async function action({ request }: ActionFunctionArgs) {
   const uploadHandler = unstable_composeUploadHandlers(
@@ -66,7 +90,7 @@ const Contact = () => {
           <div className="lg:col-span-3">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">Get In Touch</h2>
             <p className="mb-8 text-autism-complementary-text">
-              Whether you have questions about our services, want to schedule an appointment, or need more information about autism resources in Minnesota, we're here to help. Fill out the form below, and a member of our team will get back to you as soon as possible.
+              Whether you have questions about our services, want to schedule an appointment, or need more information about autism resources in Minneapolis, St. Paul, or the Twin Cities, we're here to help. Fill out the form below, and a member of our team will get back to you as soon as possible.
             </p>
 
             <ContactForm />

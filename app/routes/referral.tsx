@@ -1,4 +1,5 @@
 import React from "react";
+import type { MetaFunction } from "@remix-run/node";
 import { useState, useEffect } from "react";
 import {
   ActionFunctionArgs,
@@ -6,8 +7,8 @@ import {
   unstable_createFileUploadHandler,
   unstable_createMemoryUploadHandler,
   unstable_parseMultipartFormData,
-} from '@remix-run/node';
-import { useActionData } from '@remix-run/react';
+} from "@remix-run/node";
+import { useActionData } from "@remix-run/react";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
@@ -22,6 +23,33 @@ import { toast } from "../components/ui/sonner";
 import { EmailTemplate } from "../components/EmailTemplate";
 import { Resend } from "resend";
 import autismImg9 from "../images/autism9.jpg";
+
+const siteUrl = "https://hopefulhorizonsmn.com/referral";
+
+export const meta: MetaFunction = () => [
+  { title: "Make a Referral | Autism & ABA Center in Minneapolis-St. Paul" },
+  {
+    name: "description",
+    content:
+      "Submit a referral to Hopeful Horizons for autism evaluations and ABA therapy in Minneapolis, St. Paul, and the Twin Cities.",
+  },
+  {
+    name: "keywords",
+    content:
+      "autism referral, ABA therapy referral, Minneapolis St. Paul ABA center, Twin Cities autism",
+  },
+  {
+    property: "og:title",
+    content: "Make a Referral | Autism & ABA Center in Minneapolis-St. Paul",
+  },
+  {
+    property: "og:description",
+    content:
+      "Submit a referral to Hopeful Horizons for autism evaluations and ABA therapy in Minneapolis, St. Paul, and the Twin Cities.",
+  },
+  { property: "og:type", content: "website" },
+  { property: "og:url", content: siteUrl },
+];
 
 export async function action({ request }: ActionFunctionArgs) {
   const uploadHandler = unstable_composeUploadHandlers(
@@ -40,8 +68,8 @@ export async function action({ request }: ActionFunctionArgs) {
   console.log({ data });
   const resend = new Resend(process.env.RESEND_API_KEY);
   const response = await resend.emails.send({
-    from: 'admin@hopefulhorizonsmn.com',
-    to: 'admin@hopefulhorizonsmn.com',
+    from: "admin@hopefulhorizonsmn.com",
+    to: "admin@hopefulhorizonsmn.com",
     subject: `New Referral - ${data.clientName}`,
     react: <EmailTemplate data={data} referral={true} />,
   });
@@ -49,7 +77,10 @@ export async function action({ request }: ActionFunctionArgs) {
 }
 
 const Referral = () => {
-  const { register, formState: { errors } } = useForm();
+  const {
+    register,
+    formState: { errors },
+  } = useForm();
   const [referralSent, setReferralSent] = useState(false);
   const [referralFailed, setReferralFailed] = useState(false);
   const response = useActionData<typeof action>();
@@ -61,11 +92,12 @@ const Referral = () => {
 
   return (
     <Layout>
-      {referralSent && toast.success('Referral sent successfully.')}
-      {referralFailed && toast.error('Referral failed to send. Please try again.')}
+      {referralSent && toast.success("Referral sent successfully.")}
+      {referralFailed &&
+        toast.error("Referral failed to send. Please try again.")}
       <Hero
         title="Make a Referral"
-        subtitle="We're here to help families find the support they need"
+        subtitle="We're here to help Twin Cities families find the support they need"
         ctaText=""
         ctaLink=""
         image={autismImg9}
@@ -77,50 +109,78 @@ const Referral = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-primary">How Our Referral Process Works</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">
+              How Our Referral Process Works
+            </h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">1</div>
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  1
+                </div>
                 <div>
                   <h4 className="font-medium">Submit a Referral</h4>
-                  <p className="text-neutral-dark mt-1">Complete the referral form on this page with as much detail as possible.</p>
+                  <p className="text-neutral-dark mt-1">
+                    Complete the referral form on this page with as much detail
+                    as possible.
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">2</div>
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  2
+                </div>
                 <div>
                   <h4 className="font-medium">Initial Contact</h4>
-                  <p className="text-neutral-dark mt-1">Our intake coordinator will contact the family within 2 business days of receiving the referral.</p>
+                  <p className="text-neutral-dark mt-1">
+                    Our intake coordinator will contact the family within 2
+                    business days of receiving the referral.
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">3</div>
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  3
+                </div>
                 <div>
                   <h4 className="font-medium">Screening & Assessment</h4>
-                  <p className="text-neutral-dark mt-1">We'll schedule an initial assessment to determine the appropriate services.</p>
+                  <p className="text-neutral-dark mt-1">
+                    We'll schedule an initial assessment to determine the
+                    appropriate services.
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">4</div>
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  4
+                </div>
                 <div>
                   <h4 className="font-medium">Service Planning</h4>
-                  <p className="text-neutral-dark mt-1">Our team will develop a personalized plan of care based on individual needs.</p>
+                  <p className="text-neutral-dark mt-1">
+                    Our team will develop a personalized plan of care based on
+                    individual needs.
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 p-5 border border-interactive-hover rounded-lg bg-neutral-light">
               <h4 className="font-semibold mb-2">Need immediate assistance?</h4>
-              <p className="mb-4">If you have urgent questions or need help with the referral process, please contact us directly.</p>
+              <p className="mb-4">
+                If you have urgent questions or need help with the referral
+                process, please contact us directly.
+              </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button className="bg-primary text-white hover:bg-interactive-hover">
                   <Link to="/contact">Contact Us</Link>
                 </Button>
                 <a href="tel:+16122222817">
-                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                  <Button
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary hover:text-white"
+                  >
                     Call (612) 222-2817
                   </Button>
                 </a>
@@ -129,26 +189,42 @@ const Referral = () => {
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-md border border-border">
-            <h3 className="text-xl font-semibold mb-4 text-primary">Referral Form</h3>
+            <h3 className="text-xl font-semibold mb-4 text-primary">
+              Referral Form
+            </h3>
             <form
-              action='/referral'
-              method='POST'
-              encType='multipart/form-data'
-              id='referral_form'
+              action="/referral"
+              method="POST"
+              encType="multipart/form-data"
+              id="referral_form"
               className="space-y-5"
             >
               <div className="space-y-1.5">
                 <Label htmlFor="referralType">Referral Type</Label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="selfReferral" {...register("referralType")} value="Self-Referral" />
-                    <label htmlFor="selfReferral" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                    <Checkbox
+                      id="selfReferral"
+                      {...register("referralType")}
+                      value="Self-Referral"
+                    />
+                    <label
+                      htmlFor="selfReferral"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
                       Self-Referral
                     </label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="providerReferral" {...register("referralType")} value="Provider Referral" />
-                    <label htmlFor="providerReferral" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                    <Checkbox
+                      id="providerReferral"
+                      {...register("referralType")}
+                      value="Provider Referral"
+                    />
+                    <label
+                      htmlFor="providerReferral"
+                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
                       Provider Referral
                     </label>
                   </div>
@@ -158,25 +234,55 @@ const Referral = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <Label htmlFor="referrerName">Your Name*</Label>
-                  <Input id="referrerName" {...register("referrerName", { required: true })} className={errors.referrerName ? "border-red-500" : ""} />
-                  {errors.referrerName && <p className="text-red-500 text-xs mt-1">This field is required</p>}
+                  <Input
+                    id="referrerName"
+                    {...register("referrerName", { required: true })}
+                    className={errors.referrerName ? "border-red-500" : ""}
+                  />
+                  {errors.referrerName && (
+                    <p className="text-red-500 text-xs mt-1">
+                      This field is required
+                    </p>
+                  )}
                 </div>
                 <div className="space-y-1.5">
-                  <Label htmlFor="referrerOrganization">Organization (if applicable)</Label>
-                  <Input id="referrerOrganization" {...register("referrerOrganization")} />
+                  <Label htmlFor="referrerOrganization">
+                    Organization (if applicable)
+                  </Label>
+                  <Input
+                    id="referrerOrganization"
+                    {...register("referrerOrganization")}
+                  />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <Label htmlFor="referrerEmail">Your Email*</Label>
-                  <Input id="referrerEmail" type="email" {...register("referrerEmail", { required: true })} className={errors.referrerEmail ? "border-red-500" : ""} />
-                  {errors.referrerEmail && <p className="text-red-500 text-xs mt-1">This field is required</p>}
+                  <Input
+                    id="referrerEmail"
+                    type="email"
+                    {...register("referrerEmail", { required: true })}
+                    className={errors.referrerEmail ? "border-red-500" : ""}
+                  />
+                  {errors.referrerEmail && (
+                    <p className="text-red-500 text-xs mt-1">
+                      This field is required
+                    </p>
+                  )}
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="referrerPhone">Your Phone*</Label>
-                  <Input id="referrerPhone" {...register("referrerPhone", { required: true })} className={errors.referrerPhone ? "border-red-500" : ""} />
-                  {errors.referrerPhone && <p className="text-red-500 text-xs mt-1">This field is required</p>}
+                  <Input
+                    id="referrerPhone"
+                    {...register("referrerPhone", { required: true })}
+                    className={errors.referrerPhone ? "border-red-500" : ""}
+                  />
+                  {errors.referrerPhone && (
+                    <p className="text-red-500 text-xs mt-1">
+                      This field is required
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -185,25 +291,48 @@ const Referral = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <Label htmlFor="clientName">Client Name*</Label>
-                    <Input id="clientName" {...register("clientName", { required: true })} className={errors.clientName ? "border-red-500" : ""} />
-                    {errors.clientName && <p className="text-red-500 text-xs mt-1">This field is required</p>}
+                    <Input
+                      id="clientName"
+                      {...register("clientName", { required: true })}
+                      className={errors.clientName ? "border-red-500" : ""}
+                    />
+                    {errors.clientName && (
+                      <p className="text-red-500 text-xs mt-1">
+                        This field is required
+                      </p>
+                    )}
                   </div>
                   <div className="space-y-1.5">
                     <Label htmlFor="clientAge">Client Age*</Label>
-                    <Input id="clientAge" type="number" {...register("clientAge", { required: true })} className={errors.clientAge ? "border-red-500" : ""} />
-                    {errors.clientAge && <p className="text-red-500 text-xs mt-1">This field is required</p>}
+                    <Input
+                      id="clientAge"
+                      type="number"
+                      {...register("clientAge", { required: true })}
+                      className={errors.clientAge ? "border-red-500" : ""}
+                    />
+                    {errors.clientAge && (
+                      <p className="text-red-500 text-xs mt-1">
+                        This field is required
+                      </p>
+                    )}
                   </div>
                 </div>
 
                 <div className="space-y-1.5 mt-4">
-                  <Label htmlFor="reasonForReferral">Reason for Referral*</Label>
+                  <Label htmlFor="reasonForReferral">
+                    Reason for Referral*
+                  </Label>
                   <Textarea
                     id="reasonForReferral"
                     {...register("reasonForReferral", { required: true })}
                     placeholder="Please describe the primary concerns and reasons for seeking services"
                     className={errors.reasonForReferral ? "border-red-500" : ""}
                   />
-                  {errors.reasonForReferral && <p className="text-red-500 text-xs mt-1">This field is required</p>}
+                  {errors.reasonForReferral && (
+                    <p className="text-red-500 text-xs mt-1">
+                      This field is required
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -211,37 +340,85 @@ const Referral = () => {
                 <Label>Services Interested In</Label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="service1" {...register("servicesInterested")} value="Diagnostic Assessment" />
-                    <label htmlFor="service1" className="text-sm font-medium leading-none">Diagnostic Assessment</label>
+                    <Checkbox
+                      id="service1"
+                      {...register("servicesInterested")}
+                      value="Diagnostic Assessment"
+                    />
+                    <label
+                      htmlFor="service1"
+                      className="text-sm font-medium leading-none"
+                    >
+                      Diagnostic Assessment
+                    </label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="service2" {...register("servicesInterested")} value="Therapy Services" />
-                    <label htmlFor="service2" className="text-sm font-medium leading-none">Therapy Services</label>
+                    <Checkbox
+                      id="service2"
+                      {...register("servicesInterested")}
+                      value="Therapy Services"
+                    />
+                    <label
+                      htmlFor="service2"
+                      className="text-sm font-medium leading-none"
+                    >
+                      Therapy Services
+                    </label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="service3" {...register("servicesInterested")} value="Skills Development" />
-                    <label htmlFor="service3" className="text-sm font-medium leading-none">Skills Development</label>
+                    <Checkbox
+                      id="service3"
+                      {...register("servicesInterested")}
+                      value="Skills Development"
+                    />
+                    <label
+                      htmlFor="service3"
+                      className="text-sm font-medium leading-none"
+                    >
+                      Skills Development
+                    </label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="service4" {...register("servicesInterested")} value="Family Support" />
-                    <label htmlFor="service4" className="text-sm font-medium leading-none">Family Support</label>
+                    <Checkbox
+                      id="service4"
+                      {...register("servicesInterested")}
+                      value="Family Support"
+                    />
+                    <label
+                      htmlFor="service4"
+                      className="text-sm font-medium leading-none"
+                    >
+                      Family Support
+                    </label>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-1.5">
                 <div className="flex items-start space-x-2">
-                  <Checkbox id="consent" {...register("consent", { required: true })} className={errors.consent ? "border-red-500" : ""} />
+                  <Checkbox
+                    id="consent"
+                    {...register("consent", { required: true })}
+                    className={errors.consent ? "border-red-500" : ""}
+                  />
                   <label htmlFor="consent" className="text-sm">
-                    I confirm that I have permission to refer this individual for services, and understand Hopeful Horizons will contact them directly.*
+                    I confirm that I have permission to refer this individual
+                    for services, and understand Hopeful Horizons will contact
+                    them directly.*
                   </label>
                 </div>
-                {errors.consent && <p className="text-red-500 text-xs mt-1">You must consent to make a referral</p>}
+                {errors.consent && (
+                  <p className="text-red-500 text-xs mt-1">
+                    You must consent to make a referral
+                  </p>
+                )}
               </div>
 
               <div className="pt-2">
                 <Button
-                  onClick={() => toast.success('Referral submission pending...')}
+                  onClick={() =>
+                    toast.success("Referral submission pending...")
+                  }
                   type="submit"
                   className="w-full bg-accent text-neutral-dark hover:bg-accent/80"
                 >
@@ -270,4 +447,3 @@ export default Referral;
 function useEffects(arg0: () => void, arg1: any[]) {
   throw new Error("Function not implemented.");
 }
-
