@@ -153,8 +153,8 @@ const About = () => {
             <h3 className="text-xl font-semibold">Abdulaziz Berento</h3>
             <p className="text-autism-interactive-hover">Executive Director</p>
             <p className="mt-2 text-autism-complementary-text">
-              Behaviorial Therapist with 5+ years of experience in autism
-              diagnosis and intervention.
+              Behaviorial Therapist with 8+ years of experience in ASD
+              intervention.
             </p>
           </div>
 
