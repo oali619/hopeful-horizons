@@ -1,4 +1,15 @@
-import{u as h,d as A,r as d,j as t,O as x}from"./index-D5PVpqHN.js";import{T as M}from"./index-D5VjBfMN.js";import{a as c}from"./autism0-BXS7FAi0.js";import{f as j,_ as T,M as C,L as $,S as k}from"./components-ak811H2G.js";import{u as O}from"./index-DdMl8o6H.js";/**
+import { u as h, d as A, r as d, j as t, O as x } from "./index-D5PVpqHN.js";
+import { T as M } from "./index-D5VjBfMN.js";
+import { a as c } from "./autism0-BXS7FAi0.js";
+import {
+  f as j,
+  _ as T,
+  M as C,
+  L as $,
+  S as k,
+} from "./components-ak811H2G.js";
+import { u as O } from "./index-DdMl8o6H.js";
+/**
  * @remix-run/react v2.16.6
  *
  * Copyright (c) Remix Software Inc.
@@ -7,4 +18,142 @@ import{u as h,d as A,r as d,j as t,O as x}from"./index-D5PVpqHN.js";import{T as 
  * LICENSE.md file in the root directory of this source tree.
  *
  * @license MIT
- */let m="positions";function B({getKey:e,...l}){let{isSpaMode:p}=j(),o=h(),S=A();O({getKey:e,storageKey:m});let f=d.useMemo(()=>{if(!e)return null;let s=e(o,S);return s!==o.key?s:null},[]);if(p)return null;let g=((s,w)=>{if(!window.history.state||!window.history.state.key){let i=Math.random().toString(32).slice(2);window.history.replaceState({key:i},"")}try{let u=JSON.parse(sessionStorage.getItem(s)||"{}")[w||window.history.state.key];typeof u=="number"&&window.scrollTo(0,u)}catch(i){console.error(i),sessionStorage.removeItem(s)}}).toString();return d.createElement("script",T({},l,{suppressHydrationWarning:!0,dangerouslySetInnerHTML:{__html:`(${g})(${JSON.stringify(m)}, ${JSON.stringify(f)})`}}))}const n="https://hopefulhorizonsmn.com",r="Hopeful Horizons ABA Therapy Center",a="Compassionate autism support and ABA therapy for families across Minneapolis, St. Paul, and the Twin Cities.",y=c.startsWith("http")?c:`${n}${c}`,P=()=>[{title:`${r} | Autism & ABA Therapy in Minneapolis-St. Paul`},{name:"description",content:a},{name:"keywords",content:"Autism, ABA therapy, ABA center, Minneapolis, St. Paul, Twin Cities, Minnesota, autism services, behavior therapy"},{name:"robots",content:"index,follow"},{property:"og:title",content:`${r} | Autism & ABA Therapy in Minneapolis-St. Paul`},{property:"og:description",content:a},{property:"og:type",content:"website"},{property:"og:url",content:n},{property:"og:image",content:y},{name:"twitter:card",content:"summary_large_image"},{name:"twitter:title",content:`${r} | Autism & ABA Therapy in Minneapolis-St. Paul`},{name:"twitter:description",content:a},{name:"twitter:image",content:y}];function I({children:e}){const l=h(),p=`${n}${l.pathname}`,o={"@context":"https://schema.org","@type":"MedicalBusiness","@id":`${n}/#organization`,name:r,url:n,telephone:"+1-612-222-2817",address:{"@type":"PostalAddress",streetAddress:"1710 Douglas Dr Ste #225E",addressLocality:"Golden Valley",addressRegion:"MN",postalCode:"55422",addressCountry:"US"},areaServed:[{"@type":"City",name:"Minneapolis"},{"@type":"City",name:"St. Paul"},{"@type":"AdministrativeArea",name:"Twin Cities, MN"}],description:a,openingHoursSpecification:[{"@type":"OpeningHoursSpecification",dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday"],opens:"07:00",closes:"21:00"},{"@type":"OpeningHoursSpecification",dayOfWeek:["Saturday","Sunday"],opens:"09:00",closes:"17:00"}]};return t.jsxs("html",{lang:"en",children:[t.jsxs("head",{children:[t.jsx("meta",{charSet:"utf-8"}),t.jsx("link",{rel:"canonical",href:p}),t.jsx("meta",{name:"viewport",content:"width=device-width, initial-scale=1"}),t.jsx(C,{}),t.jsx($,{}),t.jsx("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify(o)}})]}),t.jsxs("body",{children:[t.jsx(M,{closeButton:!0,richColors:!0}),e,t.jsx(B,{}),t.jsx(k,{})]})]})}function b(){return t.jsx(x,{})}export{I as Layout,b as default,P as meta};
+ */ let m = "positions";
+function B({ getKey: e, ...l }) {
+  let { isSpaMode: p } = j(),
+    o = h(),
+    S = A();
+  O({ getKey: e, storageKey: m });
+  let f = d.useMemo(() => {
+    if (!e) return null;
+    let s = e(o, S);
+    return s !== o.key ? s : null;
+  }, []);
+  if (p) return null;
+  let g = ((s, w) => {
+    if (!window.history.state || !window.history.state.key) {
+      let i = Math.random().toString(32).slice(2);
+      window.history.replaceState({ key: i }, "");
+    }
+    try {
+      let u = JSON.parse(sessionStorage.getItem(s) || "{}")[
+        w || window.history.state.key
+      ];
+      typeof u == "number" && window.scrollTo(0, u);
+    } catch (i) {
+      console.error(i), sessionStorage.removeItem(s);
+    }
+  }).toString();
+  return d.createElement(
+    "script",
+    T({}, l, {
+      suppressHydrationWarning: !0,
+      dangerouslySetInnerHTML: {
+        __html: `(${g})(${JSON.stringify(m)}, ${JSON.stringify(f)})`,
+      },
+    }),
+  );
+}
+const n = "https://hopefulhorizonsmn.com",
+  r = "Hopeful Horizons ABA Therapy Center",
+  a =
+    "Compassionate autism support and ABA therapy for families across Minneapolis, St. Paul, and the Twin Cities.",
+  y = c.startsWith("http") ? c : `${n}${c}`,
+  P = () => [
+    { title: `${r} | Autism & ABA Therapy in Minneapolis-St. Paul` },
+    { name: "description", content: a },
+    {
+      name: "keywords",
+      content:
+        "Autism, ABA therapy, ABA center, Minneapolis, St. Paul, Twin Cities, Minnesota, autism services, behavior therapy",
+    },
+    { name: "robots", content: "index,follow" },
+    {
+      property: "og:title",
+      content: `${r} | Autism & ABA Therapy in Minneapolis-St. Paul`,
+    },
+    { property: "og:description", content: a },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: n },
+    { property: "og:image", content: y },
+    { name: "twitter:card", content: "summary_large_image" },
+    {
+      name: "twitter:title",
+      content: `${r} | Autism & ABA Therapy in Minneapolis-St. Paul`,
+    },
+    { name: "twitter:description", content: a },
+    { name: "twitter:image", content: y },
+  ];
+function I({ children: e }) {
+  const l = h(),
+    p = `${n}${l.pathname}`,
+    o = {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "@id": `${n}/#organization`,
+      name: r,
+      url: n,
+      telephone: "+1-612-222-2817",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "5901 Brooklyn Blvd Ste #200",
+        addressLocality: "Brooklyn Center",
+        addressRegion: "MN",
+        postalCode: "55429",
+        addressCountry: "US",
+      },
+      areaServed: [
+        { "@type": "City", name: "Minneapolis" },
+        { "@type": "City", name: "St. Paul" },
+        { "@type": "AdministrativeArea", name: "Twin Cities, MN" },
+      ],
+      description: a,
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "07:00",
+          closes: "21:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Saturday", "Sunday"],
+          opens: "09:00",
+          closes: "17:00",
+        },
+      ],
+    };
+  return t.jsxs("html", {
+    lang: "en",
+    children: [
+      t.jsxs("head", {
+        children: [
+          t.jsx("meta", { charSet: "utf-8" }),
+          t.jsx("link", { rel: "canonical", href: p }),
+          t.jsx("meta", {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1",
+          }),
+          t.jsx(C, {}),
+          t.jsx($, {}),
+          t.jsx("script", {
+            type: "application/ld+json",
+            dangerouslySetInnerHTML: { __html: JSON.stringify(o) },
+          }),
+        ],
+      }),
+      t.jsxs("body", {
+        children: [
+          t.jsx(M, { closeButton: !0, richColors: !0 }),
+          e,
+          t.jsx(B, {}),
+          t.jsx(k, {}),
+        ],
+      }),
+    ],
+  });
+}
+function b() {
+  return t.jsx(x, {});
+}
+export { I as Layout, b as default, P as meta };

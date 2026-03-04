@@ -1,6 +1,487 @@
-import{r as o,j as e}from"./index-D5PVpqHN.js";import"./index-CvELLS0v.js";import{J as c}from"./index-D5VjBfMN.js";import{c as m,L as u,H as h,S as n,M as x,P as p,a as b}from"./Section-C3cr2EYD.js";import{h as g}from"./components-ak811H2G.js";import"./index-DdMl8o6H.js";/**
+import { r as o, j as e } from "./index-D5PVpqHN.js";
+import "./index-CvELLS0v.js";
+import { J as c } from "./index-D5VjBfMN.js";
+import {
+  c as m,
+  L as u,
+  H as h,
+  S as n,
+  M as x,
+  P as p,
+  a as b,
+} from "./Section-C3cr2EYD.js";
+import { h as g } from "./components-ak811H2G.js";
+import "./index-DdMl8o6H.js";
+/**
  * @license lucide-react v0.462.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const j=m("Clock",[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["polyline",{points:"12 6 12 12 16 14",key:"68esgv"}]]),f=()=>{const[t,l]=o.useState({name:"",email:"",phone:"",subject:"",message:""}),a=r=>{const{name:s,value:i}=r.target;l(d=>({...d,[s]:i}))};return e.jsx("form",{action:"/contact",method:"POST",encType:"multipart/form-data",className:"space-y-6",children:e.jsxs(e.Fragment,{children:[e.jsxs("div",{className:"grid grid-cols-1 md:grid-cols-2 gap-6",children:[e.jsxs("div",{children:[e.jsx("label",{htmlFor:"name",className:"block mb-2 font-medium",children:"Name"}),e.jsx("input",{type:"text",id:"name",name:"name",value:t.name,onChange:a,required:!0,className:"w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"})]}),e.jsxs("div",{children:[e.jsx("label",{htmlFor:"email",className:"block mb-2 font-medium",children:"Email"}),e.jsx("input",{type:"email",id:"email",name:"email",value:t.email,onChange:a,required:!0,className:"w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"})]})]}),e.jsxs("div",{className:"grid grid-cols-1 md:grid-cols-2 gap-6",children:[e.jsxs("div",{children:[e.jsx("label",{htmlFor:"phone",className:"block mb-2 font-medium",children:"Phone (Optional)"}),e.jsx("input",{type:"tel",id:"phone",name:"phone",value:t.phone,onChange:a,className:"w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"})]}),e.jsxs("div",{children:[e.jsx("label",{htmlFor:"subject",className:"block mb-2 font-medium",children:"Subject"}),e.jsxs("select",{id:"subject",name:"subject",value:t.subject,onChange:a,required:!0,className:"w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue",children:[e.jsx("option",{value:"",children:"Please select"}),e.jsx("option",{value:"General Inquiry",children:"General Inquiry"}),e.jsx("option",{value:"Services Information",children:"Services Information"}),e.jsx("option",{value:"Appointment Request",children:"Appointment Request"}),e.jsx("option",{value:"Employment",children:"Employment"}),e.jsx("option",{value:"Feedback",children:"Feedback"}),e.jsx("option",{value:"Other",children:"Other"})]})]})]}),e.jsxs("div",{children:[e.jsx("label",{htmlFor:"message",className:"block mb-2 font-medium",children:"Message"}),e.jsx("textarea",{id:"message",name:"message",value:t.message,onChange:a,required:!0,rows:5,className:"w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue"})]}),e.jsx("div",{className:"flex justify-center md:justify-start",children:e.jsx("button",{type:"submit",className:"autism-btn-primary",children:"Send Message"})})]})})},v="https://hopefulhorizonsmn.com/contact",M=()=>[{title:"Contact Our Autism & ABA Center | Minneapolis-St. Paul | Hopeful Horizons"},{name:"description",content:"Contact Hopeful Horizons to schedule autism evaluations or ABA therapy in Minneapolis, St. Paul, and the Twin Cities."},{name:"keywords",content:"contact ABA center, autism evaluations Minneapolis, ABA therapy St. Paul, Twin Cities"},{property:"og:title",content:"Contact Our Autism & ABA Center | Minneapolis-St. Paul | Hopeful Horizons"},{property:"og:description",content:"Contact Hopeful Horizons to schedule autism evaluations or ABA therapy in Minneapolis, St. Paul, and the Twin Cities."},{property:"og:type",content:"website"},{property:"og:url",content:v}],k=()=>{const[t,l]=o.useState(!1),[a,r]=o.useState(!1),s=g();return o.useEffect(()=>{var i;(i=s==null?void 0:s.data)!=null&&i.id&&l(!0),s!=null&&s.error&&r(!0)},[s]),e.jsxs(u,{children:[t&&c.success("Message sent successfully."),a&&c.error("Message failed to send. Please try again."),e.jsx(h,{title:"Contact Us",subtitle:"We're here to answer your questions and help you access the support you need"}),e.jsx(n,{children:e.jsxs("div",{className:"grid grid-cols-1 lg:grid-cols-5 gap-8",children:[e.jsxs("div",{className:"lg:col-span-3",children:[e.jsx("h2",{className:"text-2xl md:text-3xl font-bold mb-6",children:"Get In Touch"}),e.jsx("p",{className:"mb-8 text-autism-complementary-text",children:"Whether you have questions about our services, want to schedule an appointment, or need more information about autism resources in Minneapolis, St. Paul, or the Twin Cities, we're here to help. Fill out the form below, and a member of our team will get back to you as soon as possible."}),e.jsx(f,{})]}),e.jsxs("div",{className:"lg:col-span-2 bg-autism-neutral-light p-6 rounded-lg border border-autism-border-divider",children:[e.jsx("h3",{className:"text-xl font-semibold mb-6",children:"Contact Information"}),e.jsxs("div",{className:"space-y-6",children:[e.jsxs("div",{className:"flex items-start gap-4",children:[e.jsx("div",{className:"mt-1 p-2 rounded-full",children:e.jsx(x,{size:20,className:"text-autism-accent-cta"})}),e.jsxs("div",{children:[e.jsx("h4",{className:"font-semibold mb-1",children:"Address"}),e.jsxs("address",{className:"not-italic text-autism-complementary-text",children:["1710 Douglas Dr Ste #225E",e.jsx("br",{}),"Golden Valley, MN 55422",e.jsx("br",{}),"United States"]})]})]}),e.jsxs("div",{className:"flex items-start gap-4",children:[e.jsx("div",{className:"mt-1 p-2 rounded-full",children:e.jsx(p,{size:20,className:"text-autism-accent-cta"})}),e.jsxs("div",{children:[e.jsx("h4",{className:"font-semibold mb-1",children:"Phone"}),e.jsx("p",{className:"text-autism-complementary-text",children:e.jsx("a",{href:"tel:+16122222817",className:"hover:text-autism-bright-blue",children:"(612) 222-2817"})})]})]}),e.jsxs("div",{className:"flex items-start gap-4",children:[e.jsx("div",{className:"mt-1 p-2 rounded-full",children:e.jsx(b,{size:20,className:"text-autism-accent-cta"})}),e.jsxs("div",{children:[e.jsx("h4",{className:"font-semibold mb-1",children:"Email"}),e.jsx("p",{className:"text-autism-complementary-text",children:e.jsx("a",{href:"mailto:admin@hopefulhorizonsmn.com",className:"hover:text-autism-bright-blue",children:"admin@hopefulhorizonsmn.com"})})]})]}),e.jsxs("div",{className:"flex items-start gap-4",children:[e.jsx("div",{className:"mt-1 p-2 rounded-full",children:e.jsx(j,{size:20,className:"text-autism-accent-cta"})}),e.jsxs("div",{children:[e.jsx("h4",{className:"font-semibold mb-1",children:"Hours of Operation"}),e.jsxs("p",{className:"text-autism-complementary-text",children:["Monday - Friday: 7:00am - 9:00pm",e.jsx("br",{}),"Saturday - Sunday: 9:00am - 5:00pm",e.jsx("br",{})]})]})]})]})]})]})}),e.jsxs(n,{color:"alternate",children:[e.jsx("h2",{className:"text-2xl md:text-3xl font-bold mb-8 text-center",children:"Find Us"}),e.jsx("div",{className:"rounded-lg overflow-hidden border-4 border-white shadow-lg",children:e.jsx("div",{className:"aspect-[16/9] w-full bg-autism-border-divider flex items-center justify-center",children:e.jsx("iframe",{width:"100%",height:"100%",title:"Hopeful Horizons",src:"https://maps.google.com/maps?width=100%25&height=600&hl=en&q=1710%20Douglas%20Dr%20Golden%20Valley,%20MN%2055422+(Hopeful%20Horizons)&t=&z=14&ie=UTF8&iwloc=B&output=embed"})})})]}),e.jsx(n,{children:e.jsxs("div",{className:"max-w-3xl mx-auto",children:[e.jsx("h2",{className:"text-2xl md:text-3xl font-bold mb-6 text-center",children:"Frequently Asked Questions"}),e.jsxs("div",{className:"space-y-6",children:[e.jsxs("div",{className:"bg-white p-6 rounded-lg shadow-sm border border-autism-border-divider",children:[e.jsx("h3",{className:"text-lg font-semibold mb-2",children:"How do I schedule an evaluation?"}),e.jsx("p",{className:"text-autism-complementary-text",children:"To schedule an evaluation, please complete our contact form or call our office. Our intake coordinator will gather some initial information and guide you through the process."})]}),e.jsxs("div",{className:"bg-white p-6 rounded-lg shadow-sm border border-autism-border-divider",children:[e.jsx("h3",{className:"text-lg font-semibold mb-2",children:"Does insurance cover your services?"}),e.jsx("p",{className:"text-autism-complementary-text",children:"We accept most major insurance plans, including Medical Assistance. Our administrative team can help verify your benefits and explain any out-of-pocket costs before services begin."})]}),e.jsxs("div",{className:"bg-white p-6 rounded-lg shadow-sm border border-autism-border-divider",children:[e.jsx("h3",{className:"text-lg font-semibold mb-2",children:"How long is the waiting list for services?"}),e.jsx("p",{className:"text-autism-complementary-text",children:"Waiting times vary depending on the service and current demand. We strive to accommodate families as quickly as possible and can provide resources to support you while waiting for services to begin."})]}),e.jsxs("div",{className:"bg-white p-6 rounded-lg shadow-sm border border-autism-border-divider",children:[e.jsx("h3",{className:"text-lg font-semibold mb-2",children:"What age groups do you serve?"}),e.jsx("p",{className:"text-autism-complementary-text",children:"We provide services for individuals of all ages, from early childhood through adulthood. Our programs are tailored to meet the developmental needs of each age group."})]})]})]})})]})};export{k as default,M as meta};
+ */ const j = m("Clock", [
+    ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+    ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }],
+  ]),
+  f = () => {
+    const [t, l] = o.useState({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      }),
+      a = (r) => {
+        const { name: s, value: i } = r.target;
+        l((d) => ({ ...d, [s]: i }));
+      };
+    return e.jsx("form", {
+      action: "/contact",
+      method: "POST",
+      encType: "multipart/form-data",
+      className: "space-y-6",
+      children: e.jsxs(e.Fragment, {
+        children: [
+          e.jsxs("div", {
+            className: "grid grid-cols-1 md:grid-cols-2 gap-6",
+            children: [
+              e.jsxs("div", {
+                children: [
+                  e.jsx("label", {
+                    htmlFor: "name",
+                    className: "block mb-2 font-medium",
+                    children: "Name",
+                  }),
+                  e.jsx("input", {
+                    type: "text",
+                    id: "name",
+                    name: "name",
+                    value: t.name,
+                    onChange: a,
+                    required: !0,
+                    className:
+                      "w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue",
+                  }),
+                ],
+              }),
+              e.jsxs("div", {
+                children: [
+                  e.jsx("label", {
+                    htmlFor: "email",
+                    className: "block mb-2 font-medium",
+                    children: "Email",
+                  }),
+                  e.jsx("input", {
+                    type: "email",
+                    id: "email",
+                    name: "email",
+                    value: t.email,
+                    onChange: a,
+                    required: !0,
+                    className:
+                      "w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue",
+                  }),
+                ],
+              }),
+            ],
+          }),
+          e.jsxs("div", {
+            className: "grid grid-cols-1 md:grid-cols-2 gap-6",
+            children: [
+              e.jsxs("div", {
+                children: [
+                  e.jsx("label", {
+                    htmlFor: "phone",
+                    className: "block mb-2 font-medium",
+                    children: "Phone (Optional)",
+                  }),
+                  e.jsx("input", {
+                    type: "tel",
+                    id: "phone",
+                    name: "phone",
+                    value: t.phone,
+                    onChange: a,
+                    className:
+                      "w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue",
+                  }),
+                ],
+              }),
+              e.jsxs("div", {
+                children: [
+                  e.jsx("label", {
+                    htmlFor: "subject",
+                    className: "block mb-2 font-medium",
+                    children: "Subject",
+                  }),
+                  e.jsxs("select", {
+                    id: "subject",
+                    name: "subject",
+                    value: t.subject,
+                    onChange: a,
+                    required: !0,
+                    className:
+                      "w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue",
+                    children: [
+                      e.jsx("option", { value: "", children: "Please select" }),
+                      e.jsx("option", {
+                        value: "General Inquiry",
+                        children: "General Inquiry",
+                      }),
+                      e.jsx("option", {
+                        value: "Services Information",
+                        children: "Services Information",
+                      }),
+                      e.jsx("option", {
+                        value: "Appointment Request",
+                        children: "Appointment Request",
+                      }),
+                      e.jsx("option", {
+                        value: "Employment",
+                        children: "Employment",
+                      }),
+                      e.jsx("option", {
+                        value: "Feedback",
+                        children: "Feedback",
+                      }),
+                      e.jsx("option", { value: "Other", children: "Other" }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+          e.jsxs("div", {
+            children: [
+              e.jsx("label", {
+                htmlFor: "message",
+                className: "block mb-2 font-medium",
+                children: "Message",
+              }),
+              e.jsx("textarea", {
+                id: "message",
+                name: "message",
+                value: t.message,
+                onChange: a,
+                required: !0,
+                rows: 5,
+                className:
+                  "w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-autism-bright-blue",
+              }),
+            ],
+          }),
+          e.jsx("div", {
+            className: "flex justify-center md:justify-start",
+            children: e.jsx("button", {
+              type: "submit",
+              className: "autism-btn-primary",
+              children: "Send Message",
+            }),
+          }),
+        ],
+      }),
+    });
+  },
+  v = "https://hopefulhorizonsmn.com/contact",
+  M = () => [
+    {
+      title:
+        "Contact Our Autism & ABA Center | Minneapolis-St. Paul | Hopeful Horizons",
+    },
+    {
+      name: "description",
+      content:
+        "Contact Hopeful Horizons to schedule autism evaluations or ABA therapy in Minneapolis, St. Paul, and the Twin Cities.",
+    },
+    {
+      name: "keywords",
+      content:
+        "contact ABA center, autism evaluations Minneapolis, ABA therapy St. Paul, Twin Cities",
+    },
+    {
+      property: "og:title",
+      content:
+        "Contact Our Autism & ABA Center | Minneapolis-St. Paul | Hopeful Horizons",
+    },
+    {
+      property: "og:description",
+      content:
+        "Contact Hopeful Horizons to schedule autism evaluations or ABA therapy in Minneapolis, St. Paul, and the Twin Cities.",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: v },
+  ],
+  k = () => {
+    const [t, l] = o.useState(!1),
+      [a, r] = o.useState(!1),
+      s = g();
+    return (
+      o.useEffect(() => {
+        var i;
+        (i = s == null ? void 0 : s.data) != null && i.id && l(!0),
+          s != null && s.error && r(!0);
+      }, [s]),
+      e.jsxs(u, {
+        children: [
+          t && c.success("Message sent successfully."),
+          a && c.error("Message failed to send. Please try again."),
+          e.jsx(h, {
+            title: "Contact Us",
+            subtitle:
+              "We're here to answer your questions and help you access the support you need",
+          }),
+          e.jsx(n, {
+            children: e.jsxs("div", {
+              className: "grid grid-cols-1 lg:grid-cols-5 gap-8",
+              children: [
+                e.jsxs("div", {
+                  className: "lg:col-span-3",
+                  children: [
+                    e.jsx("h2", {
+                      className: "text-2xl md:text-3xl font-bold mb-6",
+                      children: "Get In Touch",
+                    }),
+                    e.jsx("p", {
+                      className: "mb-8 text-autism-complementary-text",
+                      children:
+                        "Whether you have questions about our services, want to schedule an appointment, or need more information about autism resources in Minneapolis, St. Paul, or the Twin Cities, we're here to help. Fill out the form below, and a member of our team will get back to you as soon as possible.",
+                    }),
+                    e.jsx(f, {}),
+                  ],
+                }),
+                e.jsxs("div", {
+                  className:
+                    "lg:col-span-2 bg-autism-neutral-light p-6 rounded-lg border border-autism-border-divider",
+                  children: [
+                    e.jsx("h3", {
+                      className: "text-xl font-semibold mb-6",
+                      children: "Contact Information",
+                    }),
+                    e.jsxs("div", {
+                      className: "space-y-6",
+                      children: [
+                        e.jsxs("div", {
+                          className: "flex items-start gap-4",
+                          children: [
+                            e.jsx("div", {
+                              className: "mt-1 p-2 rounded-full",
+                              children: e.jsx(x, {
+                                size: 20,
+                                className: "text-autism-accent-cta",
+                              }),
+                            }),
+                            e.jsxs("div", {
+                              children: [
+                                e.jsx("h4", {
+                                  className: "font-semibold mb-1",
+                                  children: "Address",
+                                }),
+                                e.jsxs("address", {
+                                  className:
+                                    "not-italic text-autism-complementary-text",
+                                  children: [
+                                    "5901 Brooklyn Blvd Ste #220",
+                                    e.jsx("br", {}),
+                                    "Brooklyn Center, MN 55429",
+                                    e.jsx("br", {}),
+                                    "United States",
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        e.jsxs("div", {
+                          className: "flex items-start gap-4",
+                          children: [
+                            e.jsx("div", {
+                              className: "mt-1 p-2 rounded-full",
+                              children: e.jsx(p, {
+                                size: 20,
+                                className: "text-autism-accent-cta",
+                              }),
+                            }),
+                            e.jsxs("div", {
+                              children: [
+                                e.jsx("h4", {
+                                  className: "font-semibold mb-1",
+                                  children: "Phone",
+                                }),
+                                e.jsx("p", {
+                                  className: "text-autism-complementary-text",
+                                  children: e.jsx("a", {
+                                    href: "tel:+16122222817",
+                                    className: "hover:text-autism-bright-blue",
+                                    children: "(612) 222-2817",
+                                  }),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        e.jsxs("div", {
+                          className: "flex items-start gap-4",
+                          children: [
+                            e.jsx("div", {
+                              className: "mt-1 p-2 rounded-full",
+                              children: e.jsx(b, {
+                                size: 20,
+                                className: "text-autism-accent-cta",
+                              }),
+                            }),
+                            e.jsxs("div", {
+                              children: [
+                                e.jsx("h4", {
+                                  className: "font-semibold mb-1",
+                                  children: "Email",
+                                }),
+                                e.jsx("p", {
+                                  className: "text-autism-complementary-text",
+                                  children: e.jsx("a", {
+                                    href: "mailto:admin@hopefulhorizonsmn.com",
+                                    className: "hover:text-autism-bright-blue",
+                                    children: "admin@hopefulhorizonsmn.com",
+                                  }),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        e.jsxs("div", {
+                          className: "flex items-start gap-4",
+                          children: [
+                            e.jsx("div", {
+                              className: "mt-1 p-2 rounded-full",
+                              children: e.jsx(j, {
+                                size: 20,
+                                className: "text-autism-accent-cta",
+                              }),
+                            }),
+                            e.jsxs("div", {
+                              children: [
+                                e.jsx("h4", {
+                                  className: "font-semibold mb-1",
+                                  children: "Hours of Operation",
+                                }),
+                                e.jsxs("p", {
+                                  className: "text-autism-complementary-text",
+                                  children: [
+                                    "Monday - Friday: 7:00am - 9:00pm",
+                                    e.jsx("br", {}),
+                                    "Saturday - Sunday: 9:00am - 5:00pm",
+                                    e.jsx("br", {}),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          }),
+          e.jsxs(n, {
+            color: "alternate",
+            children: [
+              e.jsx("h2", {
+                className: "text-2xl md:text-3xl font-bold mb-8 text-center",
+                children: "Find Us",
+              }),
+              e.jsx("div", {
+                className:
+                  "rounded-lg overflow-hidden border-4 border-white shadow-lg",
+                children: e.jsx("div", {
+                  className:
+                    "aspect-[16/9] w-full bg-autism-border-divider flex items-center justify-center",
+                  children: e.jsx("iframe", {
+                    width: "100%",
+                    height: "100%",
+                    title: "Hopeful Horizons",
+                    src: "https://maps.google.com/maps?width=100%25&height=600&hl=en&q=5901%20Brooklyn%20Blvd%20Ste%20200,%20MN%2055429+(Hopeful%20Horizons)&t=&z=14&ie=UTF8&iwloc=B&output=embed",
+                  }),
+                }),
+              }),
+            ],
+          }),
+          e.jsx(n, {
+            children: e.jsxs("div", {
+              className: "max-w-3xl mx-auto",
+              children: [
+                e.jsx("h2", {
+                  className: "text-2xl md:text-3xl font-bold mb-6 text-center",
+                  children: "Frequently Asked Questions",
+                }),
+                e.jsxs("div", {
+                  className: "space-y-6",
+                  children: [
+                    e.jsxs("div", {
+                      className:
+                        "bg-white p-6 rounded-lg shadow-sm border border-autism-border-divider",
+                      children: [
+                        e.jsx("h3", {
+                          className: "text-lg font-semibold mb-2",
+                          children: "How do I schedule an evaluation?",
+                        }),
+                        e.jsx("p", {
+                          className: "text-autism-complementary-text",
+                          children:
+                            "To schedule an evaluation, please complete our contact form or call our office. Our intake coordinator will gather some initial information and guide you through the process.",
+                        }),
+                      ],
+                    }),
+                    e.jsxs("div", {
+                      className:
+                        "bg-white p-6 rounded-lg shadow-sm border border-autism-border-divider",
+                      children: [
+                        e.jsx("h3", {
+                          className: "text-lg font-semibold mb-2",
+                          children: "Does insurance cover your services?",
+                        }),
+                        e.jsx("p", {
+                          className: "text-autism-complementary-text",
+                          children:
+                            "We accept most major insurance plans, including Medical Assistance. Our administrative team can help verify your benefits and explain any out-of-pocket costs before services begin.",
+                        }),
+                      ],
+                    }),
+                    e.jsxs("div", {
+                      className:
+                        "bg-white p-6 rounded-lg shadow-sm border border-autism-border-divider",
+                      children: [
+                        e.jsx("h3", {
+                          className: "text-lg font-semibold mb-2",
+                          children:
+                            "How long is the waiting list for services?",
+                        }),
+                        e.jsx("p", {
+                          className: "text-autism-complementary-text",
+                          children:
+                            "Waiting times vary depending on the service and current demand. We strive to accommodate families as quickly as possible and can provide resources to support you while waiting for services to begin.",
+                        }),
+                      ],
+                    }),
+                    e.jsxs("div", {
+                      className:
+                        "bg-white p-6 rounded-lg shadow-sm border border-autism-border-divider",
+                      children: [
+                        e.jsx("h3", {
+                          className: "text-lg font-semibold mb-2",
+                          children: "What age groups do you serve?",
+                        }),
+                        e.jsx("p", {
+                          className: "text-autism-complementary-text",
+                          children:
+                            "We provide services for individuals of all ages, from early childhood through adulthood. Our programs are tailored to meet the developmental needs of each age group.",
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          }),
+        ],
+      })
+    );
+  };
+export { k as default, M as meta };
